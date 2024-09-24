@@ -16,9 +16,9 @@ namespace TurryWoods
         }
         public float maxForwardSpeed = 8.0f;
         public float rotationSpeed;
-        public float m_MaxRotationSpeed = 1200;
-        public float m_MinRotationSpeed = 800;
-        public float gravity = 20.0f;
+        public float m_MaxRotationSpeed;
+        public float m_MinRotationSpeed;
+        public float gravity;
 
         private static PlayerController s_Instance;
         private PlayerInput m_PlayerInput;
