@@ -1787,11 +1787,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit
       objectReference: {fileID: 0}
-    - target: {fileID: 6776160878954543288, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3245,16 +3240,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153052212746930823, guid: 634dc1cf549cbb543be3efe6a04ec353,
-        type: 3}
-      propertyPath: gravity
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153052212746930823, guid: 634dc1cf549cbb543be3efe6a04ec353,
-        type: 3}
-      propertyPath: maxForwardSpeed
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6644927691446505142, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}
