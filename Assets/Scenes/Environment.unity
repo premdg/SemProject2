@@ -1369,95 +1369,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.39265347
-      objectReference: {fileID: 0}
-    - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.177269
-      objectReference: {fileID: 0}
-    - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.70235
-      objectReference: {fileID: 0}
-    - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.96371496
-      objectReference: {fileID: 0}
-    - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.26693356
-      objectReference: {fileID: 0}
     - target: {fileID: 5071351837037751166, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_Name
       value: Cameras
-      objectReference: {fileID: 0}
-    - target: {fileID: 5723049456560521828, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0000009536743
-      objectReference: {fileID: 0}
-    - target: {fileID: 5723049456560521828, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.96371496
-      objectReference: {fileID: 0}
-    - target: {fileID: 5723049456560521828, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.26693356
-      objectReference: {fileID: 0}
-    - target: {fileID: 6074431902075788094, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0000009536743
-      objectReference: {fileID: 0}
-    - target: {fileID: 6074431902075788094, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9684109
-      objectReference: {fileID: 0}
-    - target: {fileID: 6074431902075788094, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.24935995
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456821725813500353, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.39265347
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456821725813500353, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.177269
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456821725813500353, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.70235
-      objectReference: {fileID: 0}
-    - target: {fileID: 6571640961704071600, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6571640961704071600, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6571640961704071600, guid: 81b2be0184de77b41aacfb536bb76649,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6571640961704071600, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
@@ -1937,16 +1852,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153052212746930823, guid: 634dc1cf549cbb543be3efe6a04ec353,
-        type: 3}
-      propertyPath: m_MaxRotationSpeed
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153052212746930823, guid: 634dc1cf549cbb543be3efe6a04ec353,
-        type: 3}
-      propertyPath: m_MinRotationSpeed
-      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6644927691446505142, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}
@@ -3160,11 +3065,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit
       objectReference: {fileID: 0}
-    - target: {fileID: 5949568683040593550, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 44ccf824de438654babce75a1329605e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

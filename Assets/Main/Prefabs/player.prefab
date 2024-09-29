@@ -1679,8 +1679,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxForwardSpeed: 8
   rotationSpeed: 5
-  m_MaxRotationSpeed: 1200
-  m_MinRotationSpeed: 800
+  m_MaxRotationSpeed: 500
+  m_MinRotationSpeed: 300
   gravity: 20
 --- !u!114 &9062216782757200535
 MonoBehaviour:

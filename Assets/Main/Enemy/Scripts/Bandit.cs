@@ -12,6 +12,8 @@ namespace TurryWoods
     public PlayerScanner playerScanner;
     public float timeToStopPursuit = 2.0f;
     public float timeToWaitOnPursuit=2.0f;
+
+    public float attackDistance;
     private PlayerController m_Target;
 
     private EnemyController m_EnemyController;
@@ -23,6 +25,8 @@ namespace TurryWoods
 
     private readonly int m_HashInPursuit = Animator.StringToHash("inPursuit");
     private readonly int m_HashInOrigin = Animator.StringToHash("NearBase");
+    private readonly int m_HashAttack = Animator.StringToHash("Attack");
+
 
     void Awake()
     {
@@ -44,8 +48,18 @@ namespace TurryWoods
         }
         else
         {
-            m_EnemyController.SetFollowtarget(m_Target.transform.position);
-            animator.SetBool(m_HashInPursuit,true);
+            Vector3 toTarget =m_Target.transform.position-transform.position;
+            if(toTarget.magnitude <= attackDistance)
+            {
+                Debug.Log("Attacking PLayer");
+                m_EnemyController.StopFollowTarget();
+                animator.SetTrigger(m_HashAttack);
+            }
+            else
+            {
+                animator.SetBool(m_HashInPursuit,true);
+                m_EnemyController.Followtarget(m_Target.transform.position);
+            }
             if(target == null)
             {
                 m_Timesincelosttarget += Time.deltaTime;
@@ -75,7 +89,7 @@ namespace TurryWoods
     private IEnumerator WaitOnPursuit()
     {
         yield return new WaitForSeconds(timeToWaitOnPursuit);
-        m_EnemyController.SetFollowtarget(m_OriginalPosition);
+        m_EnemyController.Followtarget(m_OriginalPosition);
     }
    
 #if UNITY_EDITOR//this method will not be part of the build but only for debugging purposes

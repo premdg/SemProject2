@@ -1863,6 +1863,7 @@ GameObject:
   - component: {fileID: 4268310997248123400}
   - component: {fileID: 6776160878954543288}
   - component: {fileID: 222736754651420623}
+  - component: {fileID: 5446103548416199892}
   m_Layer: 0
   m_Name: Bandit
   m_TagString: Untagged
@@ -1901,10 +1902,10 @@ Animator:
   m_GameObject: {fileID: 3592151117436248556}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7e30eee73c241d5448ce0ac372cf6602, type: 3}
-  m_Controller: {fileID: 9100000, guid: d7c55390ab0320c47b84f63184ecb1b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 44ccf824de438654babce75a1329605e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1969,8 +1970,9 @@ MonoBehaviour:
   playerScanner:
     detectionRadius: 10
     detectionAngle: 90
-  timeToStopPursuit: 2
-  timeToWaitOnPursuit: 2
+  timeToStopPursuit: 5
+  timeToWaitOnPursuit: 5
+  attackDistance: 1.7
 --- !u!195 &6776160878954543288
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1981,11 +1983,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 5
+  m_Acceleration: 900
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.7
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1994,6 +1996,18 @@ NavMeshAgent:
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &222736754651420623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592151117436248556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e450b0a08e1405a43858574ff8e71960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5446103548416199892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

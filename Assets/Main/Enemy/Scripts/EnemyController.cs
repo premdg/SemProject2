@@ -16,16 +16,25 @@ public class EnemyController : MonoBehaviour
     }
     private void OnAnimatorMove()
     {
-        if (m_NavmeshAgent == null)
+        if (m_NavmeshAgent.enabled)
         {
-            return;
+            m_NavmeshAgent.speed = (m_Animator.deltaPosition / Time.fixedDeltaTime).magnitude * m_SpeedModifier;
         }
 
-        m_NavmeshAgent.speed = (m_Animator.deltaPosition / Time.fixedDeltaTime).magnitude * m_SpeedModifier;
+       
     }
 
-    public bool SetFollowtarget(Vector3 position)
+    public bool Followtarget(Vector3 position)
     {
+        if(!m_NavmeshAgent.enabled)
+        {
+            m_NavmeshAgent.enabled = true;
+        }
         return m_NavmeshAgent.SetDestination(position);
     }
+
+    public void StopFollowTarget()
+{
+    m_NavmeshAgent.enabled = false;
+}
 }
