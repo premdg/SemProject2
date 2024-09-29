@@ -61,7 +61,13 @@ namespace TurryWoods
                     400 * Time.fixedDeltaTime);
                 transform.rotation = m_TargetRotation;
             }
+
+            if(m_PlayerInput.IsAttacking)
+            {
+                Debug.Log("isAttacking");
+            }
         }
+
 
         private void OnAnimatorMove()
         {
