@@ -125,6 +125,31 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-3933451650587986509
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: inPursuit
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -885829005240169964}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9166667
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!114 &-2895870228656242568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,7 +263,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: Attack
     m_Type: 9
@@ -276,13 +301,13 @@ AnimatorStateMachine:
     m_Position: {x: 320, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -885829005240169964}
-    m_Position: {x: -280, y: 400, z: 0}
+    m_Position: {x: 30, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -485880538679115723}
     m_Position: {x: 570, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3860870962905521603}
-    m_Position: {x: 760, y: 400, z: 0}
+    m_Position: {x: 570, y: 600, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -388,6 +413,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: -6251722483094969275}
   - {fileID: 8257411164113570837}
+  - {fileID: -3933451650587986509}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -501,7 +527,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.9166667
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

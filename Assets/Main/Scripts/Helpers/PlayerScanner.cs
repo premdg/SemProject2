@@ -8,6 +8,7 @@ public class PlayerScanner
 {
     public float detectionRadius = 10.0f;
     public float detectionAngle = 90.0f;
+    public float meleeDetectionRadius = 2.0f;
     public PlayerController Detect(Transform detector)
     {
         if (PlayerController.Instance == null)
@@ -21,7 +22,8 @@ public class PlayerScanner
 
         if(PlayerPos.magnitude <=detectionRadius)
         {
-            if(Vector3.Dot(PlayerPos.normalized,detector.forward)>Mathf.Cos(detectionAngle * 0.5f * Mathf.Deg2Rad))
+            if((Vector3.Dot(PlayerPos.normalized,detector.forward)>Mathf.Cos(detectionAngle * 0.5f * Mathf.Deg2Rad))
+                || PlayerPos.magnitude <= meleeDetectionRadius)
             {
                 return PlayerController.Instance;
 

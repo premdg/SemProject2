@@ -68,6 +68,7 @@ namespace TurryWoods
         Vector3 toTarget =m_FollowTarget.transform.position - transform.position;
             if(toTarget.magnitude <= attackDistance)
             {
+                transform.rotation = Quaternion.LookRotation(toTarget);
                 m_EnemyController.StopFollowTarget();
                 m_Animator.SetTrigger(m_HashAttack);
             }
@@ -109,6 +110,8 @@ namespace TurryWoods
 
         Vector3 rotateForward = Quaternion.Euler(0,-playerScanner.detectionAngle*0.5f,0) *transform.forward;
         UnityEditor.Handles.DrawSolidArc(transform.position,Vector3.up,rotateForward,playerScanner.detectionAngle,playerScanner.detectionRadius);
+        UnityEditor.Handles.DrawSolidArc(transform.position,Vector3.up,rotateForward,360,playerScanner.meleeDetectionRadius);
+        
     }
 #endif
 }

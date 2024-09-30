@@ -14,6 +14,7 @@ namespace TurryWoods
                 return s_Instance;
             }
         }
+        public MeleeWeapon meleeWeapon;
         public float maxForwardSpeed = 8.0f;
         public float rotationSpeed;
         public float m_MaxRotationSpeed;
@@ -66,6 +67,7 @@ namespace TurryWoods
             if(m_PlayerInput.IsAttacking)
             {
                 m_Animator.SetTrigger(m_HashMelleAttack);
+                meleeWeapon.BeginAttack();
             }
         }
 
