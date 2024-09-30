@@ -34,11 +34,19 @@ namespace TurryWoods
         void Update()
         {
             m_Movement.Set(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
-            if (Input.GetButtonDown("Fire1"))
+
+            if (Input.GetButtonDown("Fire1") && !m_Attack)
             {
-                m_Attack = true;
+                StartCoroutine(attackAndWait());
             }
+            
         }
 
+        private IEnumerator attackAndWait()
+        {
+        m_Attack = true;
+        yield return new WaitForSeconds(0.03f);
+        m_Attack = false;
+        }
     }
 }

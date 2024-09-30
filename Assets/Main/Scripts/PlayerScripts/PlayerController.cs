@@ -34,6 +34,7 @@ namespace TurryWoods
         const float k_Deceleration = 75.0f;
 
         private readonly int m_HashForwardSpeed = Animator.StringToHash("ForwardSpeed");
+        private readonly int m_HashMelleAttack = Animator.StringToHash("MeleeAttack");
 
         private void Awake()    
         {
@@ -61,10 +62,10 @@ namespace TurryWoods
                     400 * Time.fixedDeltaTime);
                 transform.rotation = m_TargetRotation;
             }
-
+            m_Animator.ResetTrigger(m_HashMelleAttack);
             if(m_PlayerInput.IsAttacking)
             {
-                Debug.Log("isAttacking");
+                m_Animator.SetTrigger(m_HashMelleAttack);
             }
         }
 
