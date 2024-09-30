@@ -12,12 +12,18 @@ namespace TurryWoods
     public PlayerScanner playerScanner;
     public float timeToStopPursuit = 2.0f;
     public float timeToWaitOnPursuit=2.0f;
-
     public float attackDistance;
-    private PlayerController m_Target;
+    public bool HasFollowTarget
+    {
+        get 
+        {
+            return m_FollowTarget != null; 
+        }
+    }
+    private PlayerController m_FollowTarget;
 
     private EnemyController m_EnemyController;
-    private Animator animator;
+    private Animator m_Animator;
 
     private float m_Timesincelosttarget = 0f;
 
@@ -31,59 +37,62 @@ namespace TurryWoods
     void Awake()
     {
         m_EnemyController = GetComponent<EnemyController>();
-        animator = GetComponent<Animator>();
+        m_Animator = GetComponent<Animator>();
         m_OriginalPosition=transform.position;
     }
     void Update()
     {
-        var target = playerScanner.Detect(transform);
-
-        if (m_Target == null)
+        var detectedTarget = playerScanner.Detect(transform);
+        bool hasDetectedTarget = detectedTarget != null;
+        if (hasDetectedTarget)
         {
-            if(target != null)
-            {
-                m_Target = target;
-            }
-
+            m_FollowTarget = detectedTarget;
         }
-        else
+        if (HasFollowTarget)
         {
-            Vector3 toTarget =m_Target.transform.position-transform.position;
-            if(toTarget.magnitude <= attackDistance)
-            {
-                Debug.Log("Attacking PLayer");
-                m_EnemyController.StopFollowTarget();
-                animator.SetTrigger(m_HashAttack);
-            }
-            else
-            {
-                animator.SetBool(m_HashInPursuit,true);
-                m_EnemyController.Followtarget(m_Target.transform.position);
-            }
-            if(target == null)
-            {
-                m_Timesincelosttarget += Time.deltaTime;
-
-                if(m_Timesincelosttarget>= timeToStopPursuit)
-                {
-                    m_Target = null;
-                    animator.SetBool(m_HashInPursuit,false);
-                    StartCoroutine(WaitOnPursuit());
-                }
-            }
-            else
+            AttackOrFollowTarget();
+            if (hasDetectedTarget)
             {
                 m_Timesincelosttarget = 0;
             }
+            else
+            {
+                StopPursuit();
+            }
         }
+
+        CheckIfNearBase();
+    }
+    private void AttackOrFollowTarget()
+    {
+        Vector3 toTarget =m_FollowTarget.transform.position - transform.position;
+            if(toTarget.magnitude <= attackDistance)
+            {
+                m_EnemyController.StopFollowTarget();
+                m_Animator.SetTrigger(m_HashAttack);
+            }
+            else
+            {
+                m_Animator.SetBool(m_HashInPursuit,true);
+                m_EnemyController.Followtarget(m_FollowTarget.transform.position);
+            }
+    }
+    private void StopPursuit()
+    {
+         m_Timesincelosttarget += Time.deltaTime;
+
+                if(m_Timesincelosttarget>= timeToStopPursuit)
+                {
+                    m_FollowTarget = null;
+                    m_Animator.SetBool(m_HashInPursuit,false);
+                    StartCoroutine(WaitOnPursuit());
+                }
+    }
+    private void CheckIfNearBase()
+    {
         Vector3 toBase = m_OriginalPosition - transform.position;
         toBase.y=0;
-
-        
-
-        animator.SetBool(m_HashInOrigin, toBase.magnitude < playerScanner.detectionRadius);
-
-        //Debug.Log(toBase.magnitude);
+        m_Animator.SetBool(m_HashInOrigin, toBase.magnitude < playerScanner.detectionRadius);
     }
 
     private IEnumerator WaitOnPursuit()

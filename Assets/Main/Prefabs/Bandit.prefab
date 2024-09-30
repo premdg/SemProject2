@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 4268310997248123400}
   - component: {fileID: 6776160878954543288}
   - component: {fileID: 222736754651420623}
-  - component: {fileID: 5446103548416199892}
+  - component: {fileID: 6827002493641976822}
   m_Layer: 0
   m_Name: Bandit
   m_TagString: Untagged
@@ -2007,7 +2007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e450b0a08e1405a43858574ff8e71960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5446103548416199892
+--- !u!114 &6827002493641976822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2016,9 +2016,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3592151117436248556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e450b0a08e1405a43858574ff8e71960, type: 3}
+  m_Script: {fileID: 11500000, guid: fcf31c8291f088f499751ec4394aba78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHitPoints: 150
 --- !u!1 &3650511092158290344
 GameObject:
   m_ObjectHideFlags: 0
