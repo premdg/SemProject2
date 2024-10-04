@@ -32,6 +32,8 @@ namespace TurryWoods
 
                     Ray r = new Ray(worldPos, attackVector);
                     Debug.DrawRay(worldPos,attackVector, Color.red , 4.0f);
+
+                    m_OriginalAttackPosition[0] = worldPos;
                 }
             }
         }
@@ -45,7 +47,12 @@ namespace TurryWoods
                 m_OriginalAttackPosition[i] = ap.rootTransform.position + ap.rootTransform.TransformDirection(ap.offset);
             }
         }
-        #if UNITY_EDITOR
+
+        public void EndAttack()
+        {
+            m_IsAttack = false;
+        }
+#if UNITY_EDITOR
         private void OnDrawGizmosSelected()
         {
             for (int i = 0;i<attackPoints.Length;i++)

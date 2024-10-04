@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 namespace TurryWoods
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour , IAttackAnimListener
     {
         public static PlayerController Instance
         {
@@ -67,7 +67,7 @@ namespace TurryWoods
             if(m_PlayerInput.IsAttacking)
             {
                 m_Animator.SetTrigger(m_HashMelleAttack);
-                meleeWeapon.BeginAttack();
+                
             }
         }
 
@@ -78,6 +78,16 @@ namespace TurryWoods
             Vector3 movement = m_Animator.deltaPosition;
             movement += m_VerticalSpeed * Vector3.up * Time.fixedDeltaTime;
             m_ChController.Move(movement);
+        }
+
+        public void MeleeAttackStart()
+        {
+            meleeWeapon.BeginAttack();
+        }
+
+        public void MeleeAttackEnd()
+        {
+            meleeWeapon.EndAttack();
         }
 
         private void ComputeVerticalMovement()

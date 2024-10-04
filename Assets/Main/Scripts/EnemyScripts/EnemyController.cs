@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TurryWoods;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour , IAttackAnimListener
 {
     private NavMeshAgent m_NavmeshAgent;
     private Animator m_Animator;
@@ -37,4 +38,14 @@ public class EnemyController : MonoBehaviour
 {
     m_NavmeshAgent.enabled = false;
 }
+
+    public void MeleeAttackStart()
+    {
+        
+    }
+
+    public void MeleeAttackEnd()
+    {
+        
+    }
 }
