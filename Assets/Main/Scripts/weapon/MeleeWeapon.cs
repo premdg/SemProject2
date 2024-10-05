@@ -14,6 +14,8 @@ namespace TurryWoods
             public Vector3 offset;
             public Transform rootTransform;
         }
+
+        public LayerMask targetLayers;
         public int damage=15;
         public AttackPoint [] attackPoints = new AttackPoint[0];
 
@@ -36,7 +38,7 @@ namespace TurryWoods
                     Debug.DrawRay(worldPos,attackVector, Color.red , 4.0f);
 
                     int contacts = Physics.SphereCastNonAlloc(ray,ap.radius,m_RayCasthitcache,attackVector.magnitude,~0,QueryTriggerInteraction.Ignore);
-                    Debug.Log(contacts);
+                    
 
                     for(int c = 0; c < contacts; c++)
                     {
@@ -44,11 +46,27 @@ namespace TurryWoods
 
                         if (collider != null)
                         {
-                            Debug.Log("Hit");
+                            CheckDamage(collider,ap);
                         }
                     }
                     m_OriginalAttackPosition[0] = worldPos;
                 }
+            }
+        }
+
+        private void CheckDamage(Collider othercollider, AttackPoint ap)
+        {
+            if((targetLayers.value & (1<<othercollider.gameObject.layer))==0)
+            {
+                return;
+            }
+
+            Debug.Log("Hitting Correctly");
+            Damagable damagable= othercollider.GetComponent<Damagable>();
+
+            if (damagable != null)
+            {
+                damagable.ApplyDamage();
             }
         }
         public void BeginAttack()

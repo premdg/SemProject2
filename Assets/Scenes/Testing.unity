@@ -1754,6 +1754,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6418266620370217214, guid: beac9b54042800447a9fb016d3f07c5b,
         type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: -6418266620370217214, guid: beac9b54042800447a9fb016d3f07c5b,
+        type: 3}
       propertyPath: attackPoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -2017,6 +2022,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bandit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592151117436248556, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
