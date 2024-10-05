@@ -20,6 +20,8 @@ namespace TurryWoods
         private bool m_IsAttack = false;
         private Vector3 [] m_OriginalAttackPosition;
 
+        private RaycastHit [] m_RayCasthitcache = new RaycastHit[32];
+
         void FixedUpdate()
         {
             if (m_IsAttack)
@@ -28,11 +30,23 @@ namespace TurryWoods
                 {
                     AttackPoint ap = attackPoints[i];
                     Vector3 worldPos = ap.rootTransform.position + ap.rootTransform.TransformVector(ap.offset);
-                    Vector3 attackVector = worldPos - m_OriginalAttackPosition[i];
+                    Vector3 attackVector = (worldPos - m_OriginalAttackPosition[i]).normalized;
 
-                    Ray r = new Ray(worldPos, attackVector);
+                    Ray ray = new Ray(worldPos, attackVector);
                     Debug.DrawRay(worldPos,attackVector, Color.red , 4.0f);
 
+                    int contacts = Physics.SphereCastNonAlloc(ray,ap.radius,m_RayCasthitcache,attackVector.magnitude,~0,QueryTriggerInteraction.Ignore);
+                    Debug.Log(contacts);
+
+                    for(int c = 0; c < contacts; c++)
+                    {
+                        Collider collider = m_RayCasthitcache[c].collider;
+
+                        if (collider != null)
+                        {
+                            Debug.Log("Hit");
+                        }
+                    }
                     m_OriginalAttackPosition[0] = worldPos;
                 }
             }
