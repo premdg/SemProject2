@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace TurryWoods
 {
-    public class Bandit : MonoBehaviour
+    public class Bandit : MonoBehaviour , IMessageReceiver
 {
     public PlayerScanner playerScanner;
     public float timeToStopPursuit = 2.0f;
@@ -32,6 +33,7 @@ namespace TurryWoods
     private readonly int m_HashInPursuit = Animator.StringToHash("inPursuit");
     private readonly int m_HashInOrigin = Animator.StringToHash("NearBase");
     private readonly int m_HashAttack = Animator.StringToHash("Attack");
+    private readonly int m_HashHurt = Animator.StringToHash("Hurt");
 
 
     void Awake()
@@ -62,6 +64,26 @@ namespace TurryWoods
         }
 
         CheckIfNearBase();
+    }
+
+    public void OnRecieveMessage(IMessageReceiver.MessageType type)
+    {
+        switch(type)
+        {
+            case IMessageReceiver.MessageType.DEAD:
+                Debug.Log("Should Play DEad animation");
+                break;
+            case IMessageReceiver.MessageType.DAMAGED:
+                OnRecieveDamage();
+                break;
+            default:
+                break; 
+        }
+    }
+
+    private void OnRecieveDamage()
+    {
+        m_Animator.SetTrigger(m_HashHurt);
     }
     private void AttackOrFollowTarget()
     {

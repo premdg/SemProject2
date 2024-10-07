@@ -18,11 +18,13 @@ namespace TurryWoods
         public LayerMask targetLayers;
         public int damage=15;
         public AttackPoint [] attackPoints = new AttackPoint[0];
+        
 
         private bool m_IsAttack = false;
         private Vector3 [] m_OriginalAttackPosition;
 
         private RaycastHit [] m_RayCasthitcache = new RaycastHit[32];
+        private GameObject m_Owner;
 
         void FixedUpdate()
         {
@@ -66,8 +68,19 @@ namespace TurryWoods
 
             if (damagable != null)
             {
-                damagable.ApplyDamage();
+                Damagable.DamageMessage data;
+                data.amnt= damage;
+                data.damager= this;
+                data.damageSource = m_Owner.transform.position;
+                damagable.ApplyDamage(data);
+
+
             }
+        }
+
+        public void SetOwner(GameObject owner)
+        {
+            m_Owner = owner;    
         }
         public void BeginAttack()
         {

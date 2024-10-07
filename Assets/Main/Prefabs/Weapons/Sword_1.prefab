@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7137285
+      value: 1.1370367
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37079912
+      value: 0.37079918
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.4878235
+      value: -10.741575
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalRotation.w
@@ -69,6 +69,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3408856781508363921}
   m_SourcePrefab: {fileID: 100100000, guid: ffa463f78df756248bd71544ae012994, type: 3}
+--- !u!4 &9133367218617853681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994,
+    type: 3}
+  m_PrefabInstance: {fileID: 9133367218617990257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9133367218618088145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ffa463f78df756248bd71544ae012994,
@@ -87,7 +93,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62588ce2c037be49b908c3bcb6681c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 64
   damage: 15
+  attackPoints:
+  - radius: 0.13
+    offset: {x: -0.21, y: 0.08, z: 0.78}
+    rootTransform: {fileID: 9133367218617853681}
+  - radius: 0.13
+    offset: {x: -0.16, y: 0.08, z: 0.52}
+    rootTransform: {fileID: 9133367218617853681}
+  - radius: 0.13
+    offset: {x: -0.11, y: 0.08, z: 0.25}
+    rootTransform: {fileID: 9133367218617853681}
 --- !u!114 &3408856781508363921
 MonoBehaviour:
   m_ObjectHideFlags: 0
