@@ -24,7 +24,7 @@ namespace TurryWoods
     private PlayerController m_FollowTarget;
 
     private EnemyController m_EnemyController;
-    private Animator m_Animator;
+   
 
     private float m_Timesincelosttarget = 0f;
 
@@ -34,12 +34,13 @@ namespace TurryWoods
     private readonly int m_HashInOrigin = Animator.StringToHash("NearBase");
     private readonly int m_HashAttack = Animator.StringToHash("Attack");
     private readonly int m_HashHurt = Animator.StringToHash("Hurt");
+     private readonly int m_HashDead = Animator.StringToHash("Dead");
+    
 
 
     void Awake()
     {
         m_EnemyController = GetComponent<EnemyController>();
-        m_Animator = GetComponent<Animator>();
         m_OriginalPosition=transform.position;
     }
     void Update()
@@ -71,7 +72,7 @@ namespace TurryWoods
         switch(type)
         {
             case IMessageReceiver.MessageType.DEAD:
-                Debug.Log("Should Play DEad animation");
+                OnDead();
                 break;
             case IMessageReceiver.MessageType.DAMAGED:
                 OnRecieveDamage();
@@ -83,7 +84,12 @@ namespace TurryWoods
 
     private void OnRecieveDamage()
     {
-        m_Animator.SetTrigger(m_HashHurt);
+        m_EnemyController.Animator.SetTrigger(m_HashHurt);
+    }
+
+    private void OnDead()
+    {
+        m_EnemyController.Animator.SetTrigger(m_HashDead);
     }
     private void AttackOrFollowTarget()
     {
@@ -92,11 +98,11 @@ namespace TurryWoods
             {
                 transform.rotation = Quaternion.LookRotation(toTarget);
                 m_EnemyController.StopFollowTarget();
-                m_Animator.SetTrigger(m_HashAttack);
+                m_EnemyController.Animator.SetTrigger(m_HashAttack);
             }
             else
             {
-                m_Animator.SetBool(m_HashInPursuit,true);
+                m_EnemyController.Animator.SetBool(m_HashInPursuit,true);
                 m_EnemyController.Followtarget(m_FollowTarget.transform.position);
             }
     }
@@ -107,7 +113,7 @@ namespace TurryWoods
                 if(m_Timesincelosttarget>= timeToStopPursuit)
                 {
                     m_FollowTarget = null;
-                    m_Animator.SetBool(m_HashInPursuit,false);
+                    m_EnemyController.Animator.SetBool(m_HashInPursuit,false);
                     StartCoroutine(WaitOnPursuit());
                 }
     }
@@ -115,7 +121,7 @@ namespace TurryWoods
     {
         Vector3 toBase = m_OriginalPosition - transform.position;
         toBase.y=0;
-        m_Animator.SetBool(m_HashInOrigin, toBase.magnitude < playerScanner.detectionRadius);
+        m_EnemyController.Animator.SetBool(m_HashInOrigin, toBase.magnitude < playerScanner.detectionRadius);
     }
 
     private IEnumerator WaitOnPursuit()

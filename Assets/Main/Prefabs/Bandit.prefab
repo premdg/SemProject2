@@ -1864,7 +1864,9 @@ GameObject:
   - component: {fileID: 6776160878954543288}
   - component: {fileID: 222736754651420623}
   - component: {fileID: 6827002493641976822}
-  m_Layer: 0
+  - component: {fileID: 8520977391028834902}
+  - component: {fileID: 100604772388722988}
+  m_Layer: 6
   m_Name: Bandit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1970,7 +1972,8 @@ MonoBehaviour:
   playerScanner:
     detectionRadius: 10
     detectionAngle: 90
-  timeToStopPursuit: 5
+    meleeDetectionRadius: 2
+  timeToStopPursuit: 3
   timeToWaitOnPursuit: 5
   attackDistance: 1.7
 --- !u!195 &6776160878954543288
@@ -2019,7 +2022,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf31c8291f088f499751ec4394aba78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 150
+  hitAngle: 360
+  maxHitPoints: 20
+  invulnarabilityTime: 0.5
+  onDamageMessageReceivers:
+  - {fileID: 4268310997248123400}
+--- !u!136 &8520977391028834902
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592151117436248556}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.91, z: 0}
+--- !u!114 &100604772388722988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592151117436248556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849eda1e15f03044891da291989eb61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3650511092158290344
 GameObject:
   m_ObjectHideFlags: 0

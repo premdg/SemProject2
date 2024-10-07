@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyController : MonoBehaviour , IAttackAnimListener
 {
+    public Animator Animator { get { return m_Animator; } }
     private NavMeshAgent m_NavmeshAgent;
     private Animator m_Animator;
     private float m_SpeedModifier = 0.7f;
