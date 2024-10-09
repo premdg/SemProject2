@@ -9,6 +9,7 @@ public class dissolve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(Time.time);
         dissolveTime = Time.time;
     }
 
