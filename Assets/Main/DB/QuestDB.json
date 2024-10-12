@@ -1,0 +1,29 @@
+[
+    {
+        "uniqueid" : "q-1",
+        "title" : "Annoying Bandits!",
+        "description" : "Defeat Two bandits who are south of the camp",
+        "targets" : ["b-1"],
+        "taklTo" : null,
+        "questGiver" : "qg-1",
+        "experience" : 100,
+        "gold" : 5,
+        "amount" : "q-1",
+        "explore" : null,
+        "type" : 0
+    },
+    {
+        "uniqueid" : "q-2",
+        "title" : "Stealing Money!",
+        "description" : "Defeat Two bandits leader",
+        "targets" : ["b-2"],
+        "taklTo" : null,
+        "questGiver" : "qg-2",
+        "experience" : 200,
+        "gold" : 15,
+        "amount" : 1,
+        "explore" : null,
+        "type" : 0
+
+    }    
+]
