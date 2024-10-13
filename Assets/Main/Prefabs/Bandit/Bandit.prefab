@@ -1866,6 +1866,7 @@ GameObject:
   - component: {fileID: 6827002493641976822}
   - component: {fileID: 8520977391028834902}
   - component: {fileID: 100604772388722988}
+  - component: {fileID: 3725472373046397292}
   m_Layer: 6
   m_Name: Bandit
   m_TagString: Untagged
@@ -2024,7 +2025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitAngle: 360
   maxHitPoints: 20
-  invulnarabilityTime: 0.5
+  invulnarabilityTime: 2
   onDamageMessageReceivers:
   - {fileID: 4268310997248123400}
 --- !u!136 &8520977391028834902
@@ -2062,6 +2063,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849eda1e15f03044891da291989eb61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RagdollPrefab: {fileID: 5687841862142123839, guid: aa59d480af95aee44a33443a5e18e2e6,
+    type: 3}
+--- !u!114 &3725472373046397292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592151117436248556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6087ac276249a6142b32e59a476e106f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Uid: 301f14bc-2357-48de-9720-1aa2421d1805
 --- !u!1 &3650511092158290344
 GameObject:
   m_ObjectHideFlags: 0

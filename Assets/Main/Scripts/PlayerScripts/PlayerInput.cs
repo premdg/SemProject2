@@ -9,6 +9,8 @@ namespace TurryWoods
         private Vector3 m_Movement;
         private bool m_Attack;
 
+        public float distanceToInteract = 2.0f;
+
         public Vector3 MoveInput
         {
             get
@@ -34,12 +36,40 @@ namespace TurryWoods
         void Update()
         {
             m_Movement.Set(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
-
-            if (Input.GetButtonDown("Fire1") && !m_Attack)
+            bool isMouseLeftInput = Input.GetMouseButtonDown(0);
+            bool isMouseRightInput = Input.GetMouseButtonDown(1);
+            if (isMouseLeftInput)
             {
-                StartCoroutine(attackAndWait());
+                HandleLeftMouseBtnDown();
+            }
+
+            if (isMouseRightInput)
+            {
+                HandleRightMouseBtnDown(); 
             }
             
+        }
+        private void HandleLeftMouseBtnDown()
+        {
+            if(!m_Attack)
+                {
+                    StartCoroutine(attackAndWait());
+                }
+        }
+        private void HandleRightMouseBtnDown()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                
+                bool hasHit = Physics.Raycast(ray, out RaycastHit hit);
+
+                if (hasHit && hit.collider.CompareTag("QuestGiverNpc"))
+                {
+                    var distanceToTarget = Vector3.Distance(transform.position, hit.transform.position);
+                    if(distanceToTarget <= distanceToInteract)
+                    {
+                        Debug.Log("Hitting the taget");
+                    }
+                }
         }
 
         private IEnumerator attackAndWait()

@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3456174934994058982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.187
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203887786680221887, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_Name
+      value: Emilia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203887786680221887, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: m_TagString
+      value: QuestGiverNpc
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859737006587805038, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 2800000, guid: 0984f044e52b94447bcd7a59dfe0ded3, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 99fb07f8279601b45ba3d457a4e8b00d, type: 3}

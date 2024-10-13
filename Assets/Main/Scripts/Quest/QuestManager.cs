@@ -4,22 +4,63 @@ using System.Collections.Generic;
 using System.IO;
 namespace TurryWoods
 {
-    public class QuestManager : MonoBehaviour
+    public class JsonHelper
     {
-        public Quest [] quests;
-
-        public void Awake()
+        private class Wrapper<T>
         {
-            LoadQuestFromDB();
+            public T[] array;
         }
 
-        public void LoadQuestFromDB()
+        public static T[] GetJsonArray<T>(string json)
         {
-            using (StreamReader reader = new StreamReader("C:/Users/Tejas/Documents/GitHub/SemProject2/Assets/Main/DB/QuestDB.json"))
-            {
-                string json = reader.ReadToEnd();
-                quests = JsonUtility.FromJson<Quest[]>(json);
-            }
+            string newJson = "{\"array\" : " + json + "}";
+            Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(newJson);
+            return wrapper.array;
         }
     }
+        public class QuestManager : MonoBehaviour //IMessageReceiver
+        {
+            public Quest[] quests;
+            //private PlayerStats m_PlayerStats;
+
+            private void Awake()
+            {
+                LoadQuestsFromDB();
+                AssignQuests();
+
+                //m_PlayerStats = FindObjectOfType<PlayerStats>();
+            }
+
+            private void LoadQuestsFromDB()
+            {
+                using StreamReader reader = new StreamReader("Assets/Main/DB/QuestDB.json");
+                string json = reader.ReadToEnd();
+                var loadedQuests = JsonHelper.GetJsonArray<Quest>(json);
+                quests = new Quest[loadedQuests.Length];
+                quests = loadedQuests;
+            }
+
+            private void AssignQuests()
+            {
+                var questGivers = FindObjectsOfType<QuestGiver>();
+
+                if (questGivers != null && questGivers.Length > 0)
+                {
+                    foreach (var questGiver in questGivers)
+                    {
+                        AssignQuestTo(questGiver);
+                    }
+                }
+            }
+            private void AssignQuestTo(QuestGiver questGiver)
+            {
+                foreach (var quest in quests)
+                {
+                    if (quest.questGiver == questGiver.GetComponent<UniqueId>().Uid)
+                    {
+                        questGiver.quest = quest;
+                    }
+                }
+            }
+        }
 }

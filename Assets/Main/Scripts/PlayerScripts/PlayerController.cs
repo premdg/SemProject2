@@ -57,11 +57,11 @@ namespace TurryWoods
 
             if (m_PlayerInput.IsMoveInput)
             {
-                float rotationSpeed = Mathf.Lerp(m_MaxRotationSpeed, m_MinRotationSpeed, m_ForwardSpeed / m_DesiredForwardSpeed);
+                /*float rotationSpeed = Mathf.Lerp(m_MaxRotationSpeed, m_MinRotationSpeed, m_ForwardSpeed / m_DesiredForwardSpeed);
                 m_TargetRotation = Quaternion.RotateTowards(
                     transform.rotation,
                     m_TargetRotation,
-                    400 * Time.fixedDeltaTime);
+                    400 * Time.fixedDeltaTime);*/
                 transform.rotation = m_TargetRotation;
             }
             m_Animator.ResetTrigger(m_HashMelleAttack);
