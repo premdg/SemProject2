@@ -1891,7 +1891,7 @@ MonoBehaviour:
     detectionRadius: 10
     detectionAngle: 90
     meleeDetectionRadius: 2
-  meleeWeapon: {fileID: 0}
+  meleeWeapon: {fileID: 6706994060537910667}
   timeToStopPursuit: 3
   timeToWaitOnPursuit: 5
   attackDistance: 1.7
@@ -4898,3 +4898,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8504033299586821637}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6706994060537910667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3103088629081406350, guid: 866cfbb637678274bb58f2ed2f39ef1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8504033299586821637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62588ce2c037be49b908c3bcb6681c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

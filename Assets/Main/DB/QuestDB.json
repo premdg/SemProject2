@@ -1,12 +1,12 @@
 [
     {
         "uniqueid" : "q-1",
-        "title" : "Annoying Bandits!",
-        "description" : "Defeat Two bandits who are south of the region and take the key",
-        "targets" : ["301f14bc-2357-48de-9720-1aa2421d1805", "301f14bc-2357-48de-9720-1aa2421d1805"],
+        "title" : "Bandit Elimination",
+        "description" : "Eliminate the bandits",
+        "targets" : ["301f14bc-2357-48de-9720-1aa2421d1805"],
         "taklTo" : null,
         "questGiver" : "cdf92d04-c213-4a00-9630-d772df8ee01a",
-        "experience" : 100,
+        "experience" : 200,
         "gold" : 5,
         "amount" : 2,
         "explore" : null,
@@ -14,8 +14,8 @@
     },
     {
         "uniqueid" : "q-2",
-        "title" : "Stealing Money!",
-        "description" : "Defeat Two bandits leader",
+        "title" : "Annoying Bandits!",
+        "description" : "Defeat The bandits",
         "targets" : [""],
         "taklTo" : null,
         "questGiver" : "",
