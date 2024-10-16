@@ -9,7 +9,7 @@ public class dissolve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(Time.time);
+//        Debug.Log(Time.time);
         dissolveTime = Time.time;
     }
 
@@ -18,7 +18,7 @@ public class dissolve : MonoBehaviour
     {
         if(Time.time >= dissolveTime)
         {
-            Destroy(gameObject);
+            Destroy(gameObject , 0.1f);
         }
     }
 }

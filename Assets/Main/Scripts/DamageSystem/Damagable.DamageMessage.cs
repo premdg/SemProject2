@@ -8,9 +8,10 @@ namespace TurryWoods
     {
         public struct DamageMessage//has less behaviour than a normal class//this should have little to no data or no behaviour to it 
         {
+            
             public MonoBehaviour damager;
             public int amnt;
-            public Vector3 damageSource;
+            public GameObject damageSource;
         }
     }
 }

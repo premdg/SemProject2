@@ -73,6 +73,69 @@ PrefabInstance:
       propertyPath: image
       value: 
       objectReference: {fileID: 2800000, guid: 0984f044e52b94447bcd7a59dfe0ded3, type: 3}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.welcomeText
+      value: "Hello, a new face in troubled times. The sea\u2019s been restless since
+        the aliens arrived.How may I help you?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[0].text
+      value: Umm....Hello I am lost and found this sword lying on the ground .
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[1].text
+      value: what do you know about the aliens
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].text
+      value: Ok Thank you
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[0].answer.text
+      value: You found a weapon, brave soul. May it serve you well against the darkness.Thank
+        you for saving me. Let me know if you need guidance.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[1].answer.text
+      value: "Those Aliens are a blight on our community. The island across the ocean
+        holds the key to our salvation.\_Safe\_travels.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].answer.text
+      value: OK brave one my you reach your destination
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].isAlwaysAsked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[0].answer.questID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[1].answer.questID
+      value: q-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].answer.forcedDialogQuit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

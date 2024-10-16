@@ -1596,6 +1596,7 @@ GameObject:
   - component: {fileID: 8495070608286711460}
   - component: {fileID: 1155045013129957141}
   - component: {fileID: 8265773575837321098}
+  - component: {fileID: 4305150312911089883}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -1697,6 +1698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad853fbee9f5f4a4dad1da401637991f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToInteract: 5
 --- !u!143 &487487712574379
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1772,6 +1774,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603679ecc60755544bea67a426c9be0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quests: []
+--- !u!114 &4305150312911089883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2761730568876093078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2bcda98404ac240b4c072fda149f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentExp: 0
+  maxLvl: 5
+  currentLevel: 0
+  availableLvl: 
 --- !u!1 &2784563699133647726
 GameObject:
   m_ObjectHideFlags: 0

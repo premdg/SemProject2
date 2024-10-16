@@ -67,7 +67,7 @@ namespace TurryWoods
         CheckIfNearBase();
     }
 
-    public void OnRecieveMessage(IMessageReceiver.MessageType type)
+    public void OnRecieveMessage(IMessageReceiver.MessageType type , object sender , object message)
     {
         switch(type)
         {

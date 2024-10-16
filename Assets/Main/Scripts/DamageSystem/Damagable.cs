@@ -9,8 +9,10 @@ namespace TurryWoods
     [Range(0,360.0f)]
     public float hitAngle = 360.0f;
     public int maxHitPoints;
+    public int experience;
     public int currentHitPoints {get ; private set; }
     public float invulnarabilityTime = 0.5f;
+    public LayerMask playerActionReceicers;
     public List<MonoBehaviour> onDamageMessageReceivers;
 
     private bool m_Isvulnarable = false;   
@@ -19,6 +21,12 @@ namespace TurryWoods
     public void Awake()
     {
         currentHitPoints = maxHitPoints;
+        if(0 != (playerActionReceicers.value & 1 << gameObject.layer))
+        {
+            onDamageMessageReceivers.Add(FindObjectOfType<QuestManager>());
+            onDamageMessageReceivers.Add(FindObjectOfType<PlayerStats>());
+        }
+        
     }
     public void Update()
     {
@@ -40,7 +48,7 @@ namespace TurryWoods
             return;
         }
 
-        Vector3 positionToDamager = data.damageSource - transform.position;
+        Vector3 positionToDamager = data.damageSource.transform.position - transform.position;
         positionToDamager.y = 0;
 
         if(Vector3.Angle(transform.position , positionToDamager) > hitAngle * 0.5f)
@@ -54,7 +62,7 @@ namespace TurryWoods
         for (int i = 0 ; i < onDamageMessageReceivers.Count ; i++)
         {
             var receiver = onDamageMessageReceivers[i] as IMessageReceiver;
-            receiver.OnRecieveMessage(messageType);
+            receiver.OnRecieveMessage(messageType , this, data);
            
         }
     }

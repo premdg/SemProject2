@@ -30,7 +30,7 @@ namespace TurryWoods
         {
             if (m_IsAttack)
             {
-                for(int i = 0;i<attackPoints.Length;i++)
+                for(int i = 0 ; i<attackPoints.Length ; i++)
                 {
                     AttackPoint ap = attackPoints[i];
                     Vector3 worldPos = ap.rootTransform.position + ap.rootTransform.TransformVector(ap.offset);
@@ -45,10 +45,12 @@ namespace TurryWoods
                     for(int c = 0; c < contacts; c++)
                     {
                         Collider collider = m_RayCasthitcache[c].collider;
-
+                        
                         if (collider != null)
                         {
+//                            Debug.Log(collider.name);
                             CheckDamage(collider,ap);
+
                         }
                     }
                     m_OriginalAttackPosition[0] = worldPos;
@@ -63,7 +65,7 @@ namespace TurryWoods
                 return;
             }
 
-            Debug.Log("Hitting Correctly");
+//            Debug.Log("Hitting Correctly");
             Damagable damagable= othercollider.GetComponent<Damagable>();
 
             if (damagable != null)
@@ -71,7 +73,8 @@ namespace TurryWoods
                 Damagable.DamageMessage data;
                 data.amnt= damage;
                 data.damager= this;
-                data.damageSource = m_Owner.transform.position;
+                
+                data.damageSource = m_Owner;
                 damagable.ApplyDamage(data);
 
 

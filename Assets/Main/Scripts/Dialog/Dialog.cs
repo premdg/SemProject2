@@ -20,6 +20,7 @@ namespace TurryWoods
         public string text;
         public DialogAnswer answer;
         public bool isAsked;
+        public bool isAlwaysAsked;
     }            
     
     
