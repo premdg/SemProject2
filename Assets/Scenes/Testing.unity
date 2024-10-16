@@ -927,6 +927,24 @@ Transform:
   - {fileID: 374555873}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &573899540 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7293041013523853383, guid: a0d2e3e40860a4446ac9dc00612e074a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1074527231933738352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &601427249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1074527231933738352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62588ce2c037be49b908c3bcb6681c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &608855051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3168,6 +3186,12 @@ Transform:
   - {fileID: 2123052004}
   m_Father: {fileID: 1763266286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1595587605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7293041013523853383, guid: a0d2e3e40860a4446ac9dc00612e074a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1788991685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1612669888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6644927691446505142, guid: 634dc1cf549cbb543be3efe6a04ec353,
@@ -3650,6 +3674,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit2
       objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: meleeWeapon
+      value: 
+      objectReference: {fileID: 1846346589}
+    - target: {fileID: 6434188201158240404, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: toFollow
+      value: 
+      objectReference: {fileID: 1595587605}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6827002493641976822, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: experience
@@ -3660,6 +3699,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0d2e3e40860a4446ac9dc00612e074a, type: 3}
+--- !u!114 &1846346589 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1788991685}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62588ce2c037be49b908c3bcb6681c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1879294923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4545,7 +4596,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.17
+      value: 0.166
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -4592,10 +4643,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 631726754936719604, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3592151117436248556, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_Name
       value: Bandit1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: meleeWeapon
+      value: 
+      objectReference: {fileID: 601427249}
+    - target: {fileID: 6434188201158240404, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: toFollow
+      value: 
+      objectReference: {fileID: 573899540}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: attackPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: attackPoints.Array.data[0].radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: attackPoints.Array.data[1].radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: attackPoints.Array.data[0].offset.x
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: attackPoints.Array.data[0].offset.z
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: attackPoints.Array.data[1].offset.x
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706994060537910667, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: attackPoints.Array.data[1].offset.z
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 6827002493641976822, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -4619,11 +4725,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305150312911089883, guid: 634dc1cf549cbb543be3efe6a04ec353,
-        type: 3}
-      propertyPath: maxLvl
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6153052212746930823, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}

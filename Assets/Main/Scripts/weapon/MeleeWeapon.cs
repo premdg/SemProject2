@@ -16,7 +16,7 @@ namespace TurryWoods
         }
 
         public LayerMask targetLayers;
-        public int damage=15;
+        public int damage = 15;
         public AttackPoint [] attackPoints = new AttackPoint[0];
         
 
@@ -48,7 +48,7 @@ namespace TurryWoods
                         
                         if (collider != null)
                         {
-//                            Debug.Log(collider.name);
+                            Debug.Log(collider.name);
                             CheckDamage(collider,ap);
 
                         }
