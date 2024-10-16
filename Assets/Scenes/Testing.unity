@@ -4222,7 +4222,8 @@ PrefabInstance:
       value: DialogUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4329404109373857090, guid: 9367760d7102fba4e94127a1d2b83fcd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9367760d7102fba4e94127a1d2b83fcd, type: 3}
