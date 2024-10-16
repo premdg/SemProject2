@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 namespace TurryWoods
 {
-    public class PlayerController : MonoBehaviour , IAttackAnimListener
+    public class PlayerController : MonoBehaviour , IAttackAnimListener , IMessageReceiver
     {
         public static PlayerController Instance
         {
@@ -80,6 +81,13 @@ namespace TurryWoods
             movement += m_VerticalSpeed * Vector3.up * Time.fixedDeltaTime;
             m_ChController.Move(movement);
         }
+        public void OnRecieveMessage(IMessageReceiver.MessageType type, object sender, object message)
+        {
+            if(type == IMessageReceiver.MessageType.DAMAGED) 
+            {
+                Debug.Log("Receiving Damage");
+            }
+        }
 
         public void MeleeAttackStart()
         {
@@ -125,5 +133,7 @@ namespace TurryWoods
             m_TargetRotation=targetRotation;
 
         }
+
+        
     }
 }

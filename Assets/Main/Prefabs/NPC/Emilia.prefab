@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.98
+      value: -11.587184
       objectReference: {fileID: 0}
     - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.187
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.86
+      value: 62.919006
       objectReference: {fileID: 0}
     - target: {fileID: 1096812285755129870, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
@@ -92,7 +92,7 @@ PrefabInstance:
     - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
       propertyPath: dialog.queries.Array.data[1].text
-      value: what do you know about the aliens
+      value: what are u doing here
       objectReference: {fileID: 0}
     - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
@@ -108,8 +108,8 @@ PrefabInstance:
     - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
       propertyPath: dialog.queries.Array.data[1].answer.text
-      value: "Those Aliens are a blight on our community. The island across the ocean
-        holds the key to our salvation.\_Safe\_travels.\n"
+      value: I am here to guide u to Sophey . Go meet her at the other side of the
+        river.
       objectReference: {fileID: 0}
     - target: {fileID: 5677648082140421363, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}

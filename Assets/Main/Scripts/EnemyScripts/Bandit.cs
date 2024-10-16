@@ -8,9 +8,10 @@ using UnityEngine.AI;
 
 namespace TurryWoods
 {
-    public class Bandit : MonoBehaviour , IMessageReceiver
+    public class Bandit : MonoBehaviour , IMessageReceiver , IAttackAnimListener
 {
     public PlayerScanner playerScanner;
+    public MeleeWeapon meleeWeapon;
     public float timeToStopPursuit = 2.0f;
     public float timeToWaitOnPursuit=2.0f;
     public float attackDistance;
@@ -42,6 +43,7 @@ namespace TurryWoods
     {
         m_EnemyController = GetComponent<EnemyController>();
         m_OriginalPosition=transform.position;
+        meleeWeapon.SetOwner(gameObject);
     }
     void Update()
     {
@@ -129,6 +131,15 @@ namespace TurryWoods
         yield return new WaitForSeconds(timeToWaitOnPursuit);
         m_EnemyController.Followtarget(m_OriginalPosition);
     }
+    public void MeleeAttackStart()
+        {
+            meleeWeapon.BeginAttack();
+        }
+
+        public void MeleeAttackEnd()
+        {
+            meleeWeapon.EndAttack();
+        }
    
 #if UNITY_EDITOR//this method will not be part of the build but only for debugging purposes
     private void OnDrawGizmosSelected()
@@ -140,8 +151,8 @@ namespace TurryWoods
         UnityEditor.Handles.DrawSolidArc(transform.position,Vector3.up,rotateForward,playerScanner.detectionAngle,playerScanner.detectionRadius);
         UnityEditor.Handles.DrawSolidArc(transform.position,Vector3.up,rotateForward,360,playerScanner.meleeDetectionRadius);
         
-    }
+    } 
 #endif
-}
+    }
 
 }
