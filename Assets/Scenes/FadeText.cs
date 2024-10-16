@@ -8,7 +8,7 @@ public class FadeText : MonoBehaviour
 {
     public CanvasGroup canvasGroup;  
     public TextMeshProUGUI textMeshPro;  // Reference to the TextMeshPro component
-    public float fadeDuration = 1f;   // Duration of the fade-in and fade-out animations
+    public float fadeDuration = 5f;   // Duration of the fade-in and fade-out animations
     public float displayDuration = 5f; // Time the text stays fully visible (set to 5 seconds)
 
     void Start()
