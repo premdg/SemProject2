@@ -5,7 +5,7 @@ namespace BOKI.LowPolyNature.Scripts
     public class WaterfallAudio : MonoBehaviour
     {
         [SerializeField] private float delay;
-        
+
         private AudioSource _audioSource;
 
         public void Awake()

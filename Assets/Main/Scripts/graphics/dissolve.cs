@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TurryWoods{
-public class dissolve : MonoBehaviour
+namespace TurryWoods
 {
-    public float dissolveTime = 6.0f;
-    // Start is called before the first frame update
-    void Start()
+    public class dissolve : MonoBehaviour
     {
-//        Debug.Log(Time.time);
-        dissolveTime = Time.time;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Time.time >= dissolveTime)
+        public float dissolveTime = 6.0f;
+        // Start is called before the first frame update
+        void Start()
         {
-            Destroy(gameObject , 0.1f);
+            //        Debug.Log(Time.time);
+            dissolveTime = Time.time;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Time.time >= dissolveTime)
+            {
+                Destroy(gameObject, 0.1f);
+            }
         }
     }
-}
 
 }

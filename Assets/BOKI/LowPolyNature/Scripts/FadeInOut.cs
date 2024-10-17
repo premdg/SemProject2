@@ -14,7 +14,7 @@ namespace BOKI.LowPolyNature.Scripts
         [SerializeField] private bool startFadedOut = true;
         [SerializeField] private List<float> fadeInAtSeconds;
         [SerializeField] private List<float> fadeOutAtSeconds;
-        
+
         private Image _backgroundImage;
         private float _elapsedTime;
         public void Start()
@@ -22,12 +22,12 @@ namespace BOKI.LowPolyNature.Scripts
             _backgroundImage = GetComponent<Image>();
             InitDefaults();
         }
-        
+
         private void InitDefaults()
         {
             if (startFadedOut)
                 _backgroundImage.canvasRenderer.SetAlpha(ShowValue);
-            
+
             fadeInAtSeconds.Sort();
             fadeOutAtSeconds.Sort();
 
@@ -45,16 +45,16 @@ namespace BOKI.LowPolyNature.Scripts
         {
             if (fadeInAtSeconds.Count == 0) return;
             if (_elapsedTime < fadeInAtSeconds[0]) return;
-            
+
             fadeInAtSeconds.RemoveAt(0);
             FadeIn();
         }
-        
+
         private void CheckFadeOut()
         {
             if (fadeOutAtSeconds.Count == 0) return;
             if (_elapsedTime < fadeOutAtSeconds[0]) return;
-            
+
             fadeOutAtSeconds.RemoveAt(0);
             FadeOut();
         }
@@ -63,7 +63,7 @@ namespace BOKI.LowPolyNature.Scripts
         {
             _backgroundImage.CrossFadeAlpha(HideValue, fadeDuration, false);
         }
-        
+
         private void FadeOut()
         {
             _backgroundImage.CrossFadeAlpha(ShowValue, fadeDuration, false);

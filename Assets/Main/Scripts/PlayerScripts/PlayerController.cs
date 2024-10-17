@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 namespace TurryWoods
 {
-    public class PlayerController : MonoBehaviour , IAttackAnimListener , IMessageReceiver
+    public class PlayerController : MonoBehaviour, IAttackAnimListener, IMessageReceiver
     {
         public static PlayerController Instance
         {
@@ -38,7 +38,7 @@ namespace TurryWoods
         private readonly int m_HashForwardSpeed = Animator.StringToHash("ForwardSpeed");
         private readonly int m_HashMelleAttack = Animator.StringToHash("MeleeAttack");
 
-        private void Awake()    
+        private void Awake()
         {
             m_ChController = GetComponent<CharacterController>();
             m_PlayerInput = GetComponent<PlayerInput>();
@@ -66,10 +66,10 @@ namespace TurryWoods
                 transform.rotation = m_TargetRotation;
             }
             m_Animator.ResetTrigger(m_HashMelleAttack);
-            if(m_PlayerInput.IsAttacking)
+            if (m_PlayerInput.IsAttacking)
             {
                 m_Animator.SetTrigger(m_HashMelleAttack);
-                
+
             }
         }
 
@@ -83,7 +83,7 @@ namespace TurryWoods
         }
         public void OnRecieveMessage(IMessageReceiver.MessageType type, object sender, object message)
         {
-            if(type == IMessageReceiver.MessageType.DAMAGED) 
+            if (type == IMessageReceiver.MessageType.DAMAGED)
             {
                 Debug.Log("Receiving Damage");
             }
@@ -107,33 +107,33 @@ namespace TurryWoods
         private void ComputeForwardMovement()
         {
             Vector3 moveInput = m_PlayerInput.MoveInput.normalized;
-            m_DesiredForwardSpeed=moveInput.magnitude*maxForwardSpeed;
+            m_DesiredForwardSpeed = moveInput.magnitude * maxForwardSpeed;
 
             float acceleration = m_PlayerInput.IsMoveInput ? k_Acceleration : k_Deceleration;
 
-            m_ForwardSpeed = Mathf.MoveTowards(m_ForwardSpeed, m_DesiredForwardSpeed, Time.fixedDeltaTime*acceleration);
-            m_Animator.SetFloat(m_HashForwardSpeed,m_ForwardSpeed);
+            m_ForwardSpeed = Mathf.MoveTowards(m_ForwardSpeed, m_DesiredForwardSpeed, Time.fixedDeltaTime * acceleration);
+            m_Animator.SetFloat(m_HashForwardSpeed, m_ForwardSpeed);
         }
 
         private void ComputeRotation()
         {
             Vector3 moveInput = m_PlayerInput.MoveInput.normalized;
-            Vector3 cameraDirection = Quaternion.Euler(0,m_CameraController.Playercam.m_XAxis.Value,0)*Vector3.forward;
-            Quaternion targetRotation ;
-            if(Mathf.Approximately(Vector3.Dot(moveInput,Vector3.forward),-1.0f))
+            Vector3 cameraDirection = Quaternion.Euler(0, m_CameraController.Playercam.m_XAxis.Value, 0) * Vector3.forward;
+            Quaternion targetRotation;
+            if (Mathf.Approximately(Vector3.Dot(moveInput, Vector3.forward), -1.0f))
             {
                 targetRotation = Quaternion.LookRotation(-cameraDirection);
             }
             else
             {
-                Quaternion movementRotation = Quaternion.FromToRotation(Vector3.forward,moveInput);
-                targetRotation = Quaternion.LookRotation(movementRotation*cameraDirection);
+                Quaternion movementRotation = Quaternion.FromToRotation(Vector3.forward, moveInput);
+                targetRotation = Quaternion.LookRotation(movementRotation * cameraDirection);
             }
-            
-            m_TargetRotation=targetRotation;
+
+            m_TargetRotation = targetRotation;
 
         }
 
-        
+
     }
 }

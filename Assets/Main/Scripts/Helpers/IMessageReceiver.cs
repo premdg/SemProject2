@@ -8,7 +8,7 @@ namespace TurryWoods
         {
             DAMAGED, DEAD
         }
-        void OnRecieveMessage(MessageType type, object sender , object message);
+        void OnRecieveMessage(MessageType type, object sender, object message);
     }
 }
 

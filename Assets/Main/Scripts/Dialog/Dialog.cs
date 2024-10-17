@@ -7,7 +7,7 @@ namespace TurryWoods
     [System.Serializable]
     public class DialogAnswer
     {
-        [TextArea(3,9)]
+        [TextArea(3, 9)]
         public string text;
         public bool forcedDialogQuit;
         public string questID;
@@ -16,19 +16,19 @@ namespace TurryWoods
     [System.Serializable]
     public class DialogQuerry
     {
-        [TextArea(3,9)]
+        [TextArea(3, 9)]
         public string text;
         public DialogAnswer answer;
         public bool isAsked;
         public bool isAlwaysAsked;
-    }            
-    
-    
+    }
+
+
     [System.Serializable]
     public class Dialog
     {
-        [TextArea(3,9)]
+        [TextArea(3, 9)]
         public string welcomeText;
-        public DialogQuerry [] queries;
+        public DialogQuerry[] queries;
     }
 }

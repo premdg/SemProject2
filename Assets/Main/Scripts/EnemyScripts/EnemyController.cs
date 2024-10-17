@@ -4,7 +4,7 @@ using TurryWoods;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-public class EnemyController : MonoBehaviour , IAttackAnimListener
+public class EnemyController : MonoBehaviour, IAttackAnimListener
 {
     public Animator Animator { get { return m_Animator; } }
     private NavMeshAgent m_NavmeshAgent;
@@ -23,12 +23,12 @@ public class EnemyController : MonoBehaviour , IAttackAnimListener
             m_NavmeshAgent.speed = (m_Animator.deltaPosition / Time.fixedDeltaTime).magnitude * m_SpeedModifier;
         }
 
-       
+
     }
 
     public bool Followtarget(Vector3 position)
     {
-        if(!m_NavmeshAgent.enabled)
+        if (!m_NavmeshAgent.enabled)
         {
             m_NavmeshAgent.enabled = true;
         }
@@ -36,17 +36,17 @@ public class EnemyController : MonoBehaviour , IAttackAnimListener
     }
 
     public void StopFollowTarget()
-{
-    m_NavmeshAgent.enabled = false;
-}
+    {
+        m_NavmeshAgent.enabled = false;
+    }
 
     public void MeleeAttackStart()
     {
-        
+
     }
 
     public void MeleeAttackEnd()
     {
-        
+
     }
 }

@@ -19,7 +19,7 @@ public class ReplaceWithRagdollSMB : StateMachineBehaviour
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ReplaceWithRagdoll replacer  =  animator.GetComponent<ReplaceWithRagdoll>();
+        ReplaceWithRagdoll replacer = animator.GetComponent<ReplaceWithRagdoll>();
         replacer.Replace();
     }
 
