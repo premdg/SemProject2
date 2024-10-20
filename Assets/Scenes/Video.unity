@@ -397,7 +397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: ab1bf9b78b74c60418ebc5bef194460e, type: 2}
+  m_Texture: {fileID: 8400000, guid: 859cd288e33305c4aa25b212dcbfcd91, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -691,11 +691,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909926515}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6d7fec26d3044524ab7381b3070077f8, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 77089469c879f7244b9dbd53e66bb4f6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: ab1bf9b78b74c60418ebc5bef194460e, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 859cd288e33305c4aa25b212dcbfcd91, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -844,7 +844,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2006049998}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 1d42887fc2db75c4fb078f215d6099e8, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 20f7e3162cb0d044095d8d7bc78da8be, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -853,6 +853,10 @@ PlayableDirector:
   - key: {fileID: -3527942939833589972, guid: 1d42887fc2db75c4fb078f215d6099e8, type: 2}
     value: {fileID: 1909926515}
   - key: {fileID: -5312283641544615312, guid: 1d42887fc2db75c4fb078f215d6099e8, type: 2}
+    value: {fileID: 1084428245}
+  - key: {fileID: -2937603426031429777, guid: 20f7e3162cb0d044095d8d7bc78da8be, type: 2}
+    value: {fileID: 1909926515}
+  - key: {fileID: 564523067997792859, guid: 20f7e3162cb0d044095d8d7bc78da8be, type: 2}
     value: {fileID: 1084428245}
   m_ExposedReferences:
     m_References: []
