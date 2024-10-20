@@ -316,7 +316,7 @@ MonoBehaviour:
     eyes, when a fleet of alien ships suddenly arrived from the sky, attacking with
     unprecedented force. The invasion caught everyone off guard. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8517574a5cf80bc438ca74d92a703da7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4fdb3224180476547b69672f1cdc4b58, type: 2}
   m_sharedMaterial: {fileID: -7101569361616951819, guid: 8517574a5cf80bc438ca74d92a703da7,
     type: 2}
   m_fontSharedMaterials: []
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -638.6633, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &147330154
@@ -830,7 +830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &627335822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,8 +854,8 @@ MonoBehaviour:
   m_text: For generations, the village thrived in harmony with nature, maintaining
     ancient traditions that had been passed down for centuries.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8517574a5cf80bc438ca74d92a703da7, type: 2}
-  m_sharedMaterial: {fileID: -7101569361616951819, guid: 8517574a5cf80bc438ca74d92a703da7,
+  m_fontAsset: {fileID: 11400000, guid: 4fdb3224180476547b69672f1cdc4b58, type: 2}
+  m_sharedMaterial: {fileID: -7101569361616951819, guid: 4fdb3224180476547b69672f1cdc4b58,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1100,7 +1100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &784230043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,8 +1124,8 @@ MonoBehaviour:
   m_text: The village chief, Mayor Rowan, and a select group of elders secretly guarded
     a powerful spaceship hidden on the isolated island,
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8517574a5cf80bc438ca74d92a703da7, type: 2}
-  m_sharedMaterial: {fileID: -7101569361616951819, guid: 8517574a5cf80bc438ca74d92a703da7,
+  m_fontAsset: {fileID: 11400000, guid: 4fdb3224180476547b69672f1cdc4b58, type: 2}
+  m_sharedMaterial: {fileID: -7101569361616951819, guid: 4fdb3224180476547b69672f1cdc4b58,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -562.3445, w: -133.5061}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &784230044
@@ -1280,7 +1280,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Andrew lost this memory due to a panic attack.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8517574a5cf80bc438ca74d92a703da7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4fdb3224180476547b69672f1cdc4b58, type: 2}
   m_sharedMaterial: {fileID: -7101569361616951819, guid: 8517574a5cf80bc438ca74d92a703da7,
     type: 2}
   m_fontSharedMaterials: []
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -574.26465, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &923588009
@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_text: Andrew grew up in the small, peaceful village of Turry Woods, nestled deep
     in a forest on a remote island; he has a wife, Grande.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8517574a5cf80bc438ca74d92a703da7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4fdb3224180476547b69672f1cdc4b58, type: 2}
   m_sharedMaterial: {fileID: -7101569361616951819, guid: 8517574a5cf80bc438ca74d92a703da7,
     type: 2}
   m_fontSharedMaterials: []
@@ -1770,7 +1770,7 @@ MonoBehaviour:
   m_margin: {x: -64.30278, y: 0, z: -125.130554, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2008657630
