@@ -266,6 +266,8 @@ GameObject:
   - component: {fileID: 147330152}
   - component: {fileID: 147330154}
   - component: {fileID: 147330153}
+  - component: {fileID: 147330156}
+  - component: {fileID: 147330155}
   m_Layer: 5
   m_Name: 4 s
   m_TagString: Untagged
@@ -392,6 +394,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147330151}
   m_CullTransparentMesh: 1
+--- !u!225 &147330155
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147330151}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &147330156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147330151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e69d02e5b8a424cbad6d8afe9bb4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 147330155}
+  textMeshPro: {fileID: 147330153}
+  fadeDuration: 5
+  displayDuration: 5
 --- !u!1 &211982081
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +853,8 @@ GameObject:
   - component: {fileID: 627335824}
   - component: {fileID: 627335823}
   - component: {fileID: 627335822}
+  - component: {fileID: 627335826}
+  - component: {fileID: 627335825}
   m_Layer: 5
   m_Name: 2 s
   m_TagString: Untagged
@@ -948,6 +980,34 @@ RectTransform:
   m_AnchoredPosition: {x: -80, y: -70}
   m_SizeDelta: {x: 747.5209, y: 201.67}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &627335825
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627335819}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &627335826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627335819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e69d02e5b8a424cbad6d8afe9bb4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 627335825}
+  textMeshPro: {fileID: 627335822}
+  fadeDuration: 5
+  displayDuration: 5
 --- !u!1 &784230042
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +1019,8 @@ GameObject:
   - component: {fileID: 784230045}
   - component: {fileID: 784230044}
   - component: {fileID: 784230043}
+  - component: {fileID: 784230047}
+  - component: {fileID: 784230046}
   m_Layer: 5
   m_Name: 3 s
   m_TagString: Untagged
@@ -1084,6 +1146,34 @@ RectTransform:
   m_AnchoredPosition: {x: -510, y: 122}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &784230046
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784230042}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &784230047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784230042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e69d02e5b8a424cbad6d8afe9bb4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 784230046}
+  textMeshPro: {fileID: 784230043}
+  fadeDuration: 5
+  displayDuration: 5
 --- !u!1 &923588006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,7 +1335,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923588006}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
