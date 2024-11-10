@@ -21,6 +21,7 @@ namespace TurryWoods
         public float m_MaxRotationSpeed;
         public float m_MinRotationSpeed;
         public float gravity;
+        public Transform attackHand;
 
         private static PlayerController s_Instance;
         private PlayerInput m_PlayerInput;
@@ -46,7 +47,7 @@ namespace TurryWoods
             m_CameraController = Camera.main.GetComponent<CameraController>();
             s_Instance = this;
 
-            meleeWeapon.SetOwner(gameObject);
+            //meleeWeapon.SetOwner(gameObject);
         }
 
 
@@ -98,7 +99,23 @@ namespace TurryWoods
         {
             meleeWeapon.EndAttack();
         }
+        public void UseItemFrom(InventorySlot slot)
+        {
+            if (meleeWeapon != null)
+            {
+                if (slot.itemPrefab.name == meleeWeapon.name) { return; }
+                else
+                {
+                    Destroy(meleeWeapon.gameObject);
+                }
+            }
 
+            meleeWeapon = Instantiate(slot.itemPrefab, transform)
+                .GetComponent<MeleeWeapon>();
+            meleeWeapon.GetComponent<FixedUpdteFollow>().SetFolowee(attackHand);
+            meleeWeapon.name = slot.itemPrefab.name;
+            meleeWeapon.SetOwner(gameObject);
+        }
         private void ComputeVerticalMovement()
         {
             m_VerticalSpeed = -gravity;

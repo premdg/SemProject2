@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c529fabf72b012c4d9a881e4e3a22ab9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1141208
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c529fabf72b012c4d9a881e4e3a22ab9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33295673
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c529fabf72b012c4d9a881e4e3a22ab9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.564465
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c529fabf72b012c4d9a881e4e3a22ab9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -87,7 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62588ce2c037be49b908c3bcb6681c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 0
   damage: 20
+  attackPoints: []
 --- !u!114 &-1117669489125191641
 MonoBehaviour:
   m_ObjectHideFlags: 0

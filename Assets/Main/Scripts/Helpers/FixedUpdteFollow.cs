@@ -10,8 +10,13 @@ namespace TurryWoods
         // Update is called once per frame
         void FixedUpdate()
         {
+            if (toFollow == null){return;}
             transform.position = toFollow.position;
             transform.rotation = toFollow.rotation;
+        }
+        public void SetFolowee(Transform follow)
+        {
+            toFollow = follow;
         }
     }
 }

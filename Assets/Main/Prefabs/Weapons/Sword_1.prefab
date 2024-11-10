@@ -12,17 +12,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ffa463f78df756248bd71544ae012994, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ffa463f78df756248bd71544ae012994, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1370367
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37079918
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.741575
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ffa463f78df756248bd71544ae012994, type: 3}
       propertyPath: m_LocalRotation.w
