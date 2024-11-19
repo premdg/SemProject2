@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScanner:
     detectionRadius: 10
-    detectionAngle: 90
+    detectionAngle: 92.5
     meleeDetectionRadius: 3
   meleeWeapon: {fileID: 6706994060537910667}
   timeToStopPursuit: 3

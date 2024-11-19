@@ -15,6 +15,7 @@ public class FadeText : MonoBehaviour
     {
         // Start the fade-in, display, and fade-out process
         StartCoroutine(FadeTextInAndOut());
+        //Debug.Log("Upgrade to CHATGPT 4.0 for better results");
     }
 
     IEnumerator FadeTextInAndOut()

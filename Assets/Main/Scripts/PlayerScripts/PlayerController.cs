@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Cache;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
@@ -7,13 +8,8 @@ namespace TurryWoods
 {
     public class PlayerController : MonoBehaviour, IAttackAnimListener, IMessageReceiver
     {
-        public static PlayerController Instance
-        {
-            get
-            {
-                return s_Instance;
-            }
-        }
+        public static PlayerController Instance {get ; private set;}
+       
         public bool IsRespawning 
         {
             get { return m_IsRespawning;}
@@ -61,6 +57,10 @@ namespace TurryWoods
             s_Instance = this;
 
             m_HUDManager.SetMaxHealth(m_Damageable.maxHitPoints);
+
+            Instance = this;
+
+            Debug.Log("Awake");
         }
 
 
@@ -201,7 +201,5 @@ namespace TurryWoods
             Debug.Log(InputBlocked);
             m_PlayerInput.playerControllerInputBlocked = InputBlocked;
         }
-
-
     }
 }

@@ -1920,7 +1920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitAngle: 360
-  maxHitPoints: 20
+  maxHitPoints: 110
   experience: 0
   invulnarabilityTime: 0.5
   playerActionReceicers:

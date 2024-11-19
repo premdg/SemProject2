@@ -39,12 +39,16 @@ namespace TurryWoods
 
 
 
-        private void Awake()
+        private void Start()
         {
             m_EnemyController = GetComponent<EnemyController>();
             m_OriginalPosition = transform.position;
             meleeWeapon.SetOwner(gameObject);
-            meleeWeapon.SetTargetLayer(1 << PlayerController.Instance.gameObject.layer);
+
+            if(PlayerController.Instance == null) Debug.Log("null")
+;           // meleeWeapon.SetTargetLayer(1 << PlayerController.Instance.gameObject.layer);
+
+            Debug.Log("lydaia");
         }
         private void Update()
         {
