@@ -22,8 +22,6 @@ public class EnemyController : MonoBehaviour, IAttackAnimListener
         {
             m_NavmeshAgent.speed = (m_Animator.deltaPosition / Time.fixedDeltaTime).magnitude * m_SpeedModifier;
         }
-
-
     }
 
     public bool Followtarget(Vector3 position)

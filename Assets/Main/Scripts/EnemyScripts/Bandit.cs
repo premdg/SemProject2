@@ -39,14 +39,14 @@ namespace TurryWoods
 
 
 
-        void Awake()
+        private void Awake()
         {
             m_EnemyController = GetComponent<EnemyController>();
             m_OriginalPosition = transform.position;
             meleeWeapon.SetOwner(gameObject);
             meleeWeapon.SetTargetLayer(1 << PlayerController.Instance.gameObject.layer);
         }
-        void Update()
+        private void Update()
         {
             if(PlayerController.Instance.IsRespawning)
             {
