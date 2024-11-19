@@ -73,7 +73,7 @@ public class UIManager : MonoBehaviour
 
   
         AnimateButtons();
-        Debug.Log("Upgrade to CHATGPT 4.0 for better results");
+       
 
     }
 
