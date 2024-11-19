@@ -84,7 +84,7 @@ public class UIManager : MonoBehaviour
     
     public void PlayGame()
     {
-        SceneManager.LoadScene("YourGameScene");
+        SceneManager.LoadScene("CutScene");
     }
 
   
