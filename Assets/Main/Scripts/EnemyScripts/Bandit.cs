@@ -45,10 +45,10 @@ namespace TurryWoods
             m_OriginalPosition = transform.position;
             meleeWeapon.SetOwner(gameObject);
 
-            if(PlayerController.Instance == null) Debug.Log("null")
-;           // meleeWeapon.SetTargetLayer(1 << PlayerController.Instance.gameObject.layer);
+            //if(PlayerController.Instance == null) Debug.Log("null");
+            meleeWeapon.SetTargetLayer(1 << PlayerController.Instance.gameObject.layer);
 
-            Debug.Log("lydaia");
+            //Debug.Log("lydaia");
         }
         private void Update()
         {

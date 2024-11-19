@@ -60,7 +60,7 @@ namespace TurryWoods
 
             Instance = this;
 
-            Debug.Log("Awake");
+            //Debug.Log("Awake");
         }
 
 
