@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 namespace TurryWoods
@@ -14,6 +13,10 @@ namespace TurryWoods
             {
                 return s_Instance;
             }
+        }
+        public bool IsRespawning 
+        {
+            get { return m_IsRespawning;}
         }
         public MeleeWeapon meleeWeapon;
         public float maxForwardSpeed = 8.0f;
@@ -28,8 +31,14 @@ namespace TurryWoods
         private CharacterController m_ChController;
         private Animator m_Animator;
         private CameraController m_CameraController;
+        private HudManager m_HUDManager;
+        private Damagable m_Damageable;
         private Quaternion m_TargetRotation;
 
+        private AnimatorStateInfo m_CurrentStateInfo;
+        private AnimatorStateInfo m_NextStateInfo;
+        private bool m_IsAnimTransitioning;
+        private bool m_IsRespawning;
         private float m_DesiredForwardSpeed;
         private float m_ForwardSpeed;
         private float m_VerticalSpeed;
@@ -38,32 +47,37 @@ namespace TurryWoods
 
         private readonly int m_HashForwardSpeed = Animator.StringToHash("ForwardSpeed");
         private readonly int m_HashMelleAttack = Animator.StringToHash("MeleeAttack");
+        private readonly int m_HashDeath = Animator.StringToHash("Death");
+        private readonly int m_HashBlockInput = Animator.StringToHash("BlockInput");
 
         private void Awake()
         {
             m_ChController = GetComponent<CharacterController>();
             m_PlayerInput = GetComponent<PlayerInput>();
             m_Animator = GetComponent<Animator>();
+            m_Damageable = GetComponent<Damagable>();
             m_CameraController = Camera.main.GetComponent<CameraController>();
+            m_HUDManager = FindObjectOfType<HudManager>();
             s_Instance = this;
 
-            //meleeWeapon.SetOwner(gameObject);
+            m_HUDManager.SetMaxHealth(m_Damageable.maxHitPoints);
         }
 
 
         private void FixedUpdate()
         {
+            UpdateInputBlocking();
+            CacheAnimationState();
             ComputeForwardMovement();
             ComputeVerticalMovement();
             ComputeRotation();
 
             if (m_PlayerInput.IsMoveInput)
-            {
-                /*float rotationSpeed = Mathf.Lerp(m_MaxRotationSpeed, m_MinRotationSpeed, m_ForwardSpeed / m_DesiredForwardSpeed);
+            {float rotationSpeed = Mathf.Lerp(m_MaxRotationSpeed, m_MinRotationSpeed, m_ForwardSpeed / m_DesiredForwardSpeed);
                 m_TargetRotation = Quaternion.RotateTowards(
                     transform.rotation,
                     m_TargetRotation,
-                    400 * Time.fixedDeltaTime);*/
+                    400 * Time.fixedDeltaTime);
                 transform.rotation = m_TargetRotation;
             }
             m_Animator.ResetTrigger(m_HashMelleAttack);
@@ -77,6 +91,8 @@ namespace TurryWoods
 
         private void OnAnimatorMove()
         {
+            if(m_IsRespawning) { return; }
+
             m_ChController.Move(m_Animator.deltaPosition);
             Vector3 movement = m_Animator.deltaPosition;
             movement += m_VerticalSpeed * Vector3.up * Time.fixedDeltaTime;
@@ -86,15 +102,35 @@ namespace TurryWoods
         {
             if (type == IMessageReceiver.MessageType.DAMAGED)
             {
+                m_HUDManager.SetHealth((sender as Damagable).currentHitPoints); 
                 Debug.Log("Receiving Damage");
+            }
+            if (type == IMessageReceiver.MessageType.DEAD)
+            {
+                m_IsRespawning = true;
+                m_Animator.SetTrigger(m_HashDeath);
+                m_HUDManager.SetHealth(0);
             }
         }
 
         public void MeleeAttackStart()
         {
-            meleeWeapon.BeginAttack();
+            if(meleeWeapon !=null)
+            {
+                meleeWeapon.BeginAttack();
+            }
+            
         }
-
+        public void StartRespawn()
+        {
+            transform.position = Vector3.zero;
+            m_HUDManager.SetHealth(m_Damageable.maxHitPoints);
+            m_Damageable.SetInitialHealth();
+        }
+        public void Finishrespawn()
+        {
+            m_IsRespawning = false;
+        }
         public void MeleeAttackEnd()
         {
             meleeWeapon.EndAttack();
@@ -112,7 +148,7 @@ namespace TurryWoods
 
             meleeWeapon = Instantiate(slot.itemPrefab, transform)
                 .GetComponent<MeleeWeapon>();
-            meleeWeapon.GetComponent<FixedUpdteFollow>().SetFolowee(attackHand);
+            meleeWeapon.GetComponent<FixedUpdateFollow>().SetFolowee(attackHand);
             meleeWeapon.name = slot.itemPrefab.name;
             meleeWeapon.SetOwner(gameObject);
         }
@@ -149,6 +185,21 @@ namespace TurryWoods
 
             m_TargetRotation = targetRotation;
 
+        }
+        private void CacheAnimationState()
+        {
+            m_CurrentStateInfo = m_Animator.GetCurrentAnimatorStateInfo(0);
+            m_NextStateInfo = m_Animator.GetNextAnimatorStateInfo(0);
+
+            m_IsAnimTransitioning = m_Animator.IsInTransition(0);
+        }
+
+        private void UpdateInputBlocking()
+        {
+            bool InputBlocked = m_CurrentStateInfo.tagHash == m_HashBlockInput && !m_IsAnimTransitioning;
+            InputBlocked |= m_NextStateInfo.tagHash == m_HashBlockInput;  
+            Debug.Log(InputBlocked);
+            m_PlayerInput.playerControllerInputBlocked = InputBlocked;
         }
 
 

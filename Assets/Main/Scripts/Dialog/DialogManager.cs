@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.EventSystems;
-using UnityEditor.Search;
 namespace TurryWoods
 {
     public class DialogManager : MonoBehaviour

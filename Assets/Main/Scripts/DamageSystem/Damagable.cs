@@ -20,7 +20,7 @@ namespace TurryWoods
 
         public void Awake()
         {
-            currentHitPoints = maxHitPoints;
+            SetInitialHealth();
             if (0 != (playerActionReceicers.value & 1 << gameObject.layer))
             {
                 onDamageMessageReceivers.Add(FindObjectOfType<QuestManager>());
@@ -40,6 +40,10 @@ namespace TurryWoods
                     m_TimeSinceLastHit = 0.0f;
                 }
             }
+        }
+        public void SetInitialHealth()
+        {
+            currentHitPoints = maxHitPoints;
         }
         public void ApplyDamage(DamageMessage data)
         {

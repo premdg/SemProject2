@@ -1599,7 +1599,7 @@ GameObject:
   - component: {fileID: 8495070608286711460}
   m_Layer: 7
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1681,11 +1681,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeWeapon: {fileID: 0}
-  maxForwardSpeed: 10
-  rotationSpeed: 5
-  m_MaxRotationSpeed: 500
-  m_MinRotationSpeed: 300
+  maxForwardSpeed: 7
+  rotationSpeed: 3
+  m_MaxRotationSpeed: 300
+  m_MinRotationSpeed: 100
   gravity: 10
+  attackHand: {fileID: 6007848802746884042}
 --- !u!114 &9062216782757200535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1698,6 +1699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad853fbee9f5f4a4dad1da401637991f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerControllerInputBlocked: 0
   distanceToInteract: 5
 --- !u!114 &1155045013129957141
 MonoBehaviour:
@@ -1712,7 +1714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitAngle: 360
-  maxHitPoints: 200
+  maxHitPoints: 20
   experience: 0
   invulnarabilityTime: 0.5
   playerActionReceicers:

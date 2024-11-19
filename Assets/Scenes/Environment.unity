@@ -491,12 +491,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1651861627}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &142171736 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1513487669}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &145122825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -725,6 +719,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bandit (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1592,17 +1591,17 @@ PrefabInstance:
     - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.9800005
+      value: -5.6610003
       objectReference: {fileID: 0}
     - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.952999
+      value: 12.674
       objectReference: {fileID: 0}
     - target: {fileID: 3467643092924892788, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.439999
+      value: -15.649998
       objectReference: {fileID: 0}
     - target: {fileID: 5071351837037751166, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
@@ -1622,7 +1621,7 @@ PrefabInstance:
     - target: {fileID: 5723049456560521828, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.26693356
+      value: 0.26693365
       objectReference: {fileID: 0}
     - target: {fileID: 6074431902075788094, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
@@ -1637,22 +1636,22 @@ PrefabInstance:
     - target: {fileID: 6074431902075788094, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.24935995
+      value: 0.24935998
       objectReference: {fileID: 0}
     - target: {fileID: 6456821725813500353, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.9800005
+      value: -5.6610003
       objectReference: {fileID: 0}
     - target: {fileID: 6456821725813500353, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.952999
+      value: 12.674
       objectReference: {fileID: 0}
     - target: {fileID: 6456821725813500353, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.439999
+      value: -15.649998
       objectReference: {fileID: 0}
     - target: {fileID: 6571640961704071600, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
@@ -1677,7 +1676,7 @@ PrefabInstance:
     - target: {fileID: 6571640961704071600, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2317505
+      value: 0.23175056
       objectReference: {fileID: 0}
     - target: {fileID: 6995562312706955640, guid: 81b2be0184de77b41aacfb536bb76649,
         type: 3}
@@ -1806,6 +1805,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bandit (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.detectionRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1946,6 +1955,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3446023068087797218, guid: 6f8743e3473cdb44ca2c0185feea4b4b,
+        type: 3}
+      propertyPath: healhSlider
+      value: 
+      objectReference: {fileID: 1352654234}
+    - target: {fileID: 4041472370994444250, guid: 6f8743e3473cdb44ca2c0185feea4b4b,
+        type: 3}
+      propertyPath: invetoryPanel
+      value: 
+      objectReference: {fileID: 1127852325}
     - target: {fileID: 7448736749700117910, guid: 6f8743e3473cdb44ca2c0185feea4b4b,
         type: 3}
       propertyPath: m_Name
@@ -2510,6 +2529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2535,6 +2559,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1155045013129957141, guid: 634dc1cf549cbb543be3efe6a04ec353,
+        type: 3}
+      propertyPath: maxHitPoints
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 2761730568876093078, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}
       propertyPath: m_Name
@@ -2563,17 +2592,17 @@ PrefabInstance:
     - target: {fileID: 6644927691446505142, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.13
+      value: 4.189
       objectReference: {fileID: 0}
     - target: {fileID: 6644927691446505142, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.22
+      value: 4.941
       objectReference: {fileID: 0}
     - target: {fileID: 6644927691446505142, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60.66
+      value: 61.45
       objectReference: {fileID: 0}
     - target: {fileID: 6644927691446505142, guid: 634dc1cf549cbb543be3efe6a04ec353,
         type: 3}
@@ -3535,7 +3564,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.510002
+      value: -8.05
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -3545,7 +3574,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.29
+      value: 26.58
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -3586,6 +3615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bandit (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4199,7 +4233,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7770653
+      value: -4.19
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -4209,7 +4243,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.119186
+      value: 24.33
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -4251,6 +4285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4267,7 +4306,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.630001
+      value: 4.41
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -4277,7 +4316,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.29
+      value: 15.63
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -4318,6 +4357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bandit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4392,6 +4436,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072552698244625544, guid: fe9dd49a993603d48adffa6dc50c6507,
+        type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 3644890547173601872, guid: beac9b54042800447a9fb016d3f07c5b,
+        type: 3}
+    - target: {fileID: 4072552698244625544, guid: fe9dd49a993603d48adffa6dc50c6507,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 5209860991386205204, guid: fe9dd49a993603d48adffa6dc50c6507,
         type: 3}
@@ -5484,6 +5539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6257,7 +6317,6 @@ Transform:
   - {fileID: 1116156198}
   - {fileID: 585716881}
   - {fileID: 1046262132}
-  - {fileID: 142171736}
   - {fileID: 142088000}
   - {fileID: 654094035}
   m_Father: {fileID: 0}
@@ -7420,6 +7479,96 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1001 &1352654233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 549026752245747847, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_Name
+      value: HudUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818397234361545434, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818397234361545434, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19139318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.351359
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -106.81192
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401663100224219622, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bcd3f61054e3484dbcce1548dc77f81, type: 3}
+--- !u!114 &1352654234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2853731779559556769, guid: 0bcd3f61054e3484dbcce1548dc77f81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1352654233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1355329333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 548dc2f8a753406489a3b9ed877d0a2b,
@@ -8071,74 +8220,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db93e6325024c749aa2663b9998053d, type: 3}
---- !u!1001 &1513487669
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1157826964}
-    m_Modifications:
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.8399963
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.65999603
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.73936933
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.6733001
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -84.645
-      objectReference: {fileID: 0}
-    - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3592151117436248556, guid: a0d2e3e40860a4446ac9dc00612e074a,
-        type: 3}
-      propertyPath: m_Name
-      value: Bandit (9)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a0d2e3e40860a4446ac9dc00612e074a, type: 3}
 --- !u!1001 &1517432152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8150,7 +8231,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.0600014
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -8160,7 +8241,7 @@ PrefabInstance:
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.29
+      value: 12.81
       objectReference: {fileID: 0}
     - target: {fileID: 253769560764018815, guid: a0d2e3e40860a4446ac9dc00612e074a,
         type: 3}
@@ -8201,6 +8282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bandit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9247,6 +9333,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4268310997248123400, guid: a0d2e3e40860a4446ac9dc00612e074a,
+        type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9941,6 +10032,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072552698244625544, guid: fe9dd49a993603d48adffa6dc50c6507,
+        type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 9133367218618088145, guid: 866cfbb637678274bb58f2ed2f39ef1a,
+        type: 3}
+    - target: {fileID: 4072552698244625544, guid: fe9dd49a993603d48adffa6dc50c6507,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 5209860991386205204, guid: fe9dd49a993603d48adffa6dc50c6507,
         type: 3}
@@ -11106,17 +11208,17 @@ PrefabInstance:
     - target: {fileID: 2363937066570874600, guid: 923e4336ea7135a46bf311d1cd02a1a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.587184
+      value: -18.23
       objectReference: {fileID: 0}
     - target: {fileID: 2363937066570874600, guid: 923e4336ea7135a46bf311d1cd02a1a9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.82
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 2363937066570874600, guid: 923e4336ea7135a46bf311d1cd02a1a9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 62.919006
+      value: 65.87
       objectReference: {fileID: 0}
     - target: {fileID: 2363937066570874600, guid: 923e4336ea7135a46bf311d1cd02a1a9,
         type: 3}
@@ -12301,3 +12403,4 @@ SceneRoots:
   - {fileID: 1824154092}
   - {fileID: 938168688}
   - {fileID: 1899394465}
+  - {fileID: 1352654233}

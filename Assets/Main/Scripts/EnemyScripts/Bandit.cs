@@ -44,8 +44,20 @@ namespace TurryWoods
             m_EnemyController = GetComponent<EnemyController>();
             m_OriginalPosition = transform.position;
             meleeWeapon.SetOwner(gameObject);
+            meleeWeapon.SetTargetLayer(1 << PlayerController.Instance.gameObject.layer);
         }
         void Update()
+        {
+            if(PlayerController.Instance.IsRespawning)
+            {
+                GotoOriginalpos();
+                CheckIfNearBase();
+                return;
+            }
+            GuardPosition();
+        }
+
+        public void GuardPosition()
         {
             var detectedTarget = playerScanner.Detect(transform);
             bool hasDetectedTarget = detectedTarget != null;
@@ -87,6 +99,13 @@ namespace TurryWoods
         private void OnRecieveDamage()
         {
             m_EnemyController.Animator.SetTrigger(m_HashHurt);
+        }
+
+        private void GotoOriginalpos()
+        {
+            m_FollowTarget = null;
+            m_EnemyController.Animator.SetBool(m_HashInPursuit , false);
+            m_EnemyController.Followtarget(m_OriginalPosition);
         }
 
         private void OnDead()
@@ -133,11 +152,13 @@ namespace TurryWoods
         }
         public void MeleeAttackStart()
         {
+            Debug.Log("Start");
             meleeWeapon.BeginAttack();
         }
 
         public void MeleeAttackEnd()
         {
+            Debug.Log("End");
             meleeWeapon.EndAttack();
         }
 
