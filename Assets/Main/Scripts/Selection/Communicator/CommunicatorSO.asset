@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b125202567e64449e589afdc3d534b, type: 3}
   m_Name: CommunicatorSO
   m_EditorClassIdentifier: 
-  characterIndex: 3
+  characterIndex: 0
