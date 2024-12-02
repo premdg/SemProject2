@@ -133,7 +133,10 @@ namespace TurryWoods
         }
         public void MeleeAttackEnd()
         {
-            meleeWeapon.EndAttack();
+            if(meleeWeapon !=null)
+            {
+                meleeWeapon.EndAttack();
+            }
         }
         public void UseItemFrom(InventorySlot slot)
         {
