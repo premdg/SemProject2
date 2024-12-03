@@ -280,6 +280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mira(Desert)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780894176595846217, guid: c84a33e67cefc8748bb0b700d1225138,
+        type: 3}
+      propertyPath: m_TagString
+      value: QuestGiverNpc
+      objectReference: {fileID: 0}
     - target: {fileID: 9148055430621785471, guid: c84a33e67cefc8748bb0b700d1225138,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3202,6 +3207,16 @@ PrefabInstance:
       propertyPath: dialog.queries.Array.data[3].answer.forcedDialogQuit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2326111861946112650, guid: 4f46098734d87e24490aef9267915ad2,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.3113427
+      objectReference: {fileID: 0}
+    - target: {fileID: -2326111861946112650, guid: 4f46098734d87e24490aef9267915ad2,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.65567136
+      objectReference: {fileID: 0}
     - target: {fileID: 3955277243576398712, guid: 4f46098734d87e24490aef9267915ad2,
         type: 3}
       propertyPath: image
@@ -3211,6 +3226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garret(snow region)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2,
+        type: 3}
+      propertyPath: m_TagString
+      value: QuestGiverNpc
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2,
         type: 3}
