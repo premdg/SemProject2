@@ -601,6 +601,7 @@ MonoBehaviour:
   mainMenu: {fileID: 1637384045}
   optionsMenu: {fileID: 318713703}
   soundMenu: {fileID: 1655000517}
+  playerMenu: {fileID: 0}
   playButton: {fileID: 45112938}
   optionsButton: {fileID: 2067952983}
   quitButton: {fileID: 216245315}
