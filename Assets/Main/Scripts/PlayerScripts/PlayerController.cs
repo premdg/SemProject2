@@ -111,7 +111,7 @@ namespace TurryWoods
                 m_IsRespawning = true;
                 m_Animator.SetTrigger(m_HashDeath);
                 m_HUDManager.SetHealth(0);
-                SceneManager.LoadScene("Testing");
+                SceneManager.LoadScene("GameOver");
             }
         }
 

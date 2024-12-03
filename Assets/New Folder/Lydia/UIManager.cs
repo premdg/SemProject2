@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject soundMenu;
 
+    public GameObject playerMenu;
+
     public RectTransform playButton;
     public RectTransform optionsButton;
     public RectTransform quitButton;
