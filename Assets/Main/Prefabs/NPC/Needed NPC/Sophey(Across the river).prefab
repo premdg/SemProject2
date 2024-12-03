@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6052803701474342584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1896801731341158, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_Name
+      value: Sophey
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896801731341158, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_TagString
+      value: QuestGiverNpc
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15960693
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080208459921836, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.welcomeText
+      value: Hey there! thank you for saving my  life , my name is sophey
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[0].text
+      value: Hello Sophey I was told to talk to you
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[1].text
+      value: 'OK what do I do now '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].text
+      value: Ia that it ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[0].answer.text
+      value: Yes , our community has been taken over by the bandits and we need you
+        save our community
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[1].answer.text
+      value: '(Quest)Search the island to find more powerfull weapons and use it
+        to your adventage '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].answer.text
+      value: 'No , you need to search for Mira in the desert region
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].isAlwaysAsked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[0].answer.questID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[1].answer.questID
+      value: q-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886717427919007732, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      propertyPath: dialog.queries.Array.data[2].answer.forcedDialogQuit
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 1677338912023364, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1896801731341158, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2919613928626637690}
+  m_SourcePrefab: {fileID: 100100000, guid: a367f32b0351f2648a0e15f3444c6f86, type: 3}
+--- !u!1 &6050970671430491614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1896801731341158, guid: a367f32b0351f2648a0e15f3444c6f86,
+    type: 3}
+  m_PrefabInstance: {fileID: 6052803701474342584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &2919613928626637690
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050970671430491614}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.7637302
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.81529236, z: 0}

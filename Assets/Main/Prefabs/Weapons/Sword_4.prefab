@@ -96,7 +96,7 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 64
-  damage: 30
+  damage: 45
   attackPoints:
   - radius: 0.13
     offset: {x: -0.23, y: 0.1, z: 0.91}

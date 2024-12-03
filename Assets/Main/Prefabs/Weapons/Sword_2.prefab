@@ -90,8 +90,17 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 64
-  damage: 20
-  attackPoints: []
+  damage: 15
+  attackPoints:
+  - radius: 0.13
+    offset: {x: 0, y: 0, z: 0}
+    rootTransform: {fileID: 0}
+  - radius: 0
+    offset: {x: 0, y: 0, z: 0}
+    rootTransform: {fileID: 0}
+  - radius: 0
+    offset: {x: 0, y: 0, z: 0}
+    rootTransform: {fileID: 0}
 --- !u!114 &-1117669489125191641
 MonoBehaviour:
   m_ObjectHideFlags: 0

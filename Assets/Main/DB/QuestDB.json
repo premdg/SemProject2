@@ -14,16 +14,31 @@
     },
     {
         "uniqueid" : "q-2",
-        "title" : "Annoying Bandits!",
-        "description" : "Defeat The bandits",
-        "targets" : [""],
+        "title" : "Search for weapons",
+        "description" : "Defeat The island bandits",
+        "targets" : ["0b5a5056-19d4-43ba-9033-ab83bc1d5ed4"],
         "taklTo" : null,
-        "questGiver" : "",
+        "questGiver" : "05da83b3-9480-47f9-ad34-89fe748c70e5",
         "experience" : 200,
         "gold" : 15,
         "amount" : 1,
         "explore" : null,
         "type" : 0
 
-    }    
+    },
+    {
+        "uniqueid" : "q-3",
+        "title" : "Search for Garret",
+        "description" : "Search and save Garret from the bandits",
+        "targets" : ["2bfbe969-ef53-4d90-8d21-9fa3c23f0f04"],
+        "taklTo" : null,
+        "questGiver" : "4815c16a-9daa-4a6e-9a6b-336af2191957",
+        "experience" : 200,
+        "gold" : 15,
+        "amount" : 1,
+        "explore" : null,
+        "type" : 0
+
+    }        
+
 ]

@@ -90,8 +90,14 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 64
-  damage: 25
-  attackPoints: []
+  damage: 30
+  attackPoints:
+  - radius: 0.25
+    offset: {x: -0.12, y: 0.07, z: 0.65}
+    rootTransform: {fileID: 4171327729372651667}
+  - radius: 0.23
+    offset: {x: -0.19, y: 0.07, z: 0.2}
+    rootTransform: {fileID: 4171327729372651667}
 --- !u!114 &5045947174651762728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,3 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toFollow: {fileID: 0}
+--- !u!4 &4171327729372651667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 1e896d25e837a2c419844a06e967bbc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4171327729372264979}
+  m_PrefabAsset: {fileID: 0}

@@ -1780,10 +1780,10 @@ GameObject:
   - component: {fileID: 4268310997248123400}
   - component: {fileID: 6827002493641976822}
   - component: {fileID: 100604772388722988}
-  - component: {fileID: 3725472373046397292}
   - component: {fileID: 6776160878954543288}
   - component: {fileID: 8520977391028834902}
   - component: {fileID: 1349434727903588997}
+  - component: {fileID: 1991009512529387842}
   m_Layer: 6
   m_Name: Bandit
   m_TagString: Untagged
@@ -1930,19 +1930,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RagdollPrefab: {fileID: 5687841862142123839, guid: aa59d480af95aee44a33443a5e18e2e6,
     type: 3}
---- !u!114 &3725472373046397292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3592151117436248556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6087ac276249a6142b32e59a476e106f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Uid: 301f14bc-2357-48de-9720-1aa2421d1805
 --- !u!195 &6776160878954543288
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2000,6 +1987,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e450b0a08e1405a43858574ff8e71960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1991009512529387842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592151117436248556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6087ac276249a6142b32e59a476e106f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Uid: 0b5a5056-19d4-43ba-9033-ab83bc1d5ed4
 --- !u!1 &3650511092158290344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4830,7 +4830,7 @@ PrefabInstance:
     - target: {fileID: 3103088629081406350, guid: 866cfbb637678274bb58f2ed2f39ef1a,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 0
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3103088629081406350, guid: 866cfbb637678274bb58f2ed2f39ef1a,
         type: 3}
