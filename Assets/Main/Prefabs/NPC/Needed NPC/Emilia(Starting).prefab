@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 4203887786680221887, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}
       propertyPath: m_Name
-      value: Emilia
+      value: Emilia(Starting)
       objectReference: {fileID: 0}
     - target: {fileID: 4203887786680221887, guid: 99fb07f8279601b45ba3d457a4e8b00d,
         type: 3}

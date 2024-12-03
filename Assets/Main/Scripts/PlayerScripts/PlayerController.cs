@@ -4,6 +4,7 @@ using System.Net.Cache;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 namespace TurryWoods
 {
     public class PlayerController : MonoBehaviour, IAttackAnimListener, IMessageReceiver
@@ -110,6 +111,7 @@ namespace TurryWoods
                 m_IsRespawning = true;
                 m_Animator.SetTrigger(m_HashDeath);
                 m_HUDManager.SetHealth(0);
+                SceneManager.LoadScene("Testing");
             }
         }
 
