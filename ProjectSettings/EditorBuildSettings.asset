@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Main/Scenes/Main/Button.unity
     guid: 3f48225e79c58a04cbdde5d1e7cc9385
   - enabled: 1
-    path: Assets/Main/Scenes/CS_Test.unity
+    path: Assets/Main/Scenes/Main/CharacterSelection.unity
     guid: ca52d2de3a8a34849a0ce9f8257cfb96
   - enabled: 1
     path: Assets/Main/Scenes/Main/Environment.unity
