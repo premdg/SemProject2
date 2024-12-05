@@ -11,14 +11,13 @@ public class UIManager : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject soundMenu;
 
-    public GameObject playerMenu;
-
     public RectTransform playButton;
     public RectTransform optionsButton;
     public RectTransform quitButton;
 
     public RectTransform soundButton;
     public RectTransform backButton;
+    public RectTransform playerButton; // Player button reference
 
     public Slider soundSlider; 
     public AudioSource backgroundMusicSource;  
@@ -59,12 +58,16 @@ public class UIManager : MonoBehaviour
             BackToMainMenu();
         });
 
+        playerButton.GetComponent<Button>().onClick.AddListener(() => {
+            PlayButtonClickSound();
+            OpenPlayerScene();
+        });
+
         resetButton.onClick.AddListener(() => {
             PlayButtonClickSound();
             ResetSoundSettings();
         });
 
-        
         float savedVolume = PlayerPrefs.GetFloat("MasterVolume", defaultVolume);
         soundSlider.value = savedVolume;
         AdjustBackgroundMusicVolume(savedVolume);
@@ -73,32 +76,25 @@ public class UIManager : MonoBehaviour
 
         backgroundMusicSource.Play();
 
-  
         AnimateButtons();
-       
-
     }
 
-    
     void PlayButtonClickSound()
     {
         buttonClickSoundSource.Play();
     }
 
-    
     public void PlayGame()
     {
         SceneManager.LoadScene("CutScene");
     }
 
-  
     public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Game is exiting");
     }
 
- 
     public void OpenOptionsMenu()
     {
         mainMenu.SetActive(false);
@@ -106,68 +102,73 @@ public class UIManager : MonoBehaviour
         DOVirtual.DelayedCall(0.1f, AnimateOptionsMenuButtons);
     }
 
-   
     public void BackToMainMenu()
     {
         optionsMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
 
+    public void OpenPlayerScene()
+    {
+        SceneManager.LoadScene("CS_Test"); 
+        Debug.Log("Loading Player Scene: CS_Test");
+    }
 
     void AnimateButtons()
     {
-        float initialScale = 0.5f;  
-        float dropDuration = 0.3f; 
+        float initialScale = 0.5f;
+        float dropDuration = 0.3f;
 
-      
         float playButtonTargetY = -283f;
         float optionsButtonTargetY = -35f;
         float quitButtonTargetY = 210f;
 
-  
         playButton.localScale = new Vector3(initialScale, initialScale, 1);  
         playButton.DOAnchorPosY(playButtonTargetY, dropDuration).SetEase(Ease.OutBounce).OnComplete(() => {
-            playButton.DOScale(1f, 0.2f); 
+            playButton.DOScale(1f, 0.2f);
         });
 
-       
         optionsButton.localScale = new Vector3(initialScale, initialScale, 1); 
         optionsButton.DOAnchorPosY(optionsButtonTargetY, dropDuration + 0.2f).SetEase(Ease.OutBounce).OnComplete(() => {
             optionsButton.DOScale(1f, 0.2f); 
         });
 
-       
         quitButton.localScale = new Vector3(initialScale, initialScale, 1); 
         quitButton.DOAnchorPosY(quitButtonTargetY, dropDuration + 0.4f).SetEase(Ease.OutBounce).OnComplete(() => {
             quitButton.DOScale(1f, 0.2f); 
         });
     }
 
-    
     void AnimateOptionsMenuButtons()
     {
         float initialScale = 0.5f;
         float dropDuration = 0.3f;
 
         float soundButtonTargetY = -150f;
+        float playerButtonTargetY = -200f; // Animation for Player button
         float backButtonTargetY = -250f;
 
         soundButton.localScale = new Vector3(initialScale, initialScale, 1);
         soundButton.anchoredPosition = new Vector2(soundButton.anchoredPosition.x, 800);  
         soundButton.DOAnchorPosY(soundButtonTargetY, dropDuration).SetEase(Ease.OutBounce).OnComplete(() => {
-            soundButton.DOScale(1f, 0.2f);  
+            soundButton.DOScale(1f, 0.2f); 
+        });
+
+        playerButton.localScale = new Vector3(initialScale, initialScale, 1); 
+        playerButton.anchoredPosition = new Vector2(playerButton.anchoredPosition.x, 800);
+        playerButton.DOAnchorPosY(playerButtonTargetY, dropDuration + 0.2f).SetEase(Ease.OutBounce).OnComplete(() => {
+            playerButton.DOScale(1f, 0.2f);  
         });
 
         backButton.localScale = new Vector3(initialScale, initialScale, 1);
         backButton.anchoredPosition = new Vector2(backButton.anchoredPosition.x, 800);  
-        backButton.DOAnchorPosY(backButtonTargetY, dropDuration + 0.2f).SetEase(Ease.OutBounce).OnComplete(() => {
+        backButton.DOAnchorPosY(backButtonTargetY, dropDuration + 0.4f).SetEase(Ease.OutBounce).OnComplete(() => {
             backButton.DOScale(1f, 0.2f);  
         });
 
         AnimateSoundSlider();
     }
 
-    
     void AnimateSoundSlider()
     {
         soundSlider.transform.localScale = Vector3.zero;
@@ -177,7 +178,6 @@ public class UIManager : MonoBehaviour
         });
     }
 
-   
     public void AdjustBackgroundMusicVolume(float volume)
     {
         backgroundMusicSource.volume = volume;
@@ -185,7 +185,6 @@ public class UIManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    
     public void ResetSoundSettings()
     {
         soundSlider.value = defaultVolume;
