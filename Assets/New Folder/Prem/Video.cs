@@ -8,7 +8,7 @@ public class Video : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        SceneManager.LoadScene("Video", LoadSceneMode.Single);
+        SceneManager.LoadScene("CS_Test", LoadSceneMode.Single);
     }
 
 }

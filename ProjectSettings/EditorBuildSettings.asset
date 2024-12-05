@@ -12,14 +12,11 @@ EditorBuildSettings:
     path: Assets/Main/Scenes/Main/CutScene.unity
     guid: e78bad39e3f82b24b88dfbcdabd1e282
   - enabled: 1
-    path: Assets/Main/Scenes/Main/Video.unity
-    guid: 9985430edb5403f45bcfdf0035c9f71f
-  - enabled: 1
-    path: Assets/Main/Scenes/Main/Button.unity
-    guid: 3f48225e79c58a04cbdde5d1e7cc9385
-  - enabled: 1
     path: Assets/Main/Scenes/Main/CS_Test.unity
     guid: ca52d2de3a8a34849a0ce9f8257cfb96
+  - enabled: 1
+    path: Assets/Main/Scenes/Main/Video.unity
+    guid: 9985430edb5403f45bcfdf0035c9f71f
   - enabled: 1
     path: Assets/Main/Scenes/Main/Environment.unity
     guid: c732593fe76e5a84197f9cd13963f706

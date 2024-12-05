@@ -9,7 +9,7 @@ public class SuiButton : MonoBehaviour
 
     void OnEnable()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 
 }

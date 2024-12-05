@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c529fabf72b012c4d9a881e4e3a22ab9, type: 3}
       propertyPath: m_Name
-      value: Sword_2
+      value: Sword2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c529fabf72b012c4d9a881e4e3a22ab9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,14 +93,14 @@ MonoBehaviour:
   damage: 15
   attackPoints:
   - radius: 0.13
-    offset: {x: 0, y: 0, z: 0}
-    rootTransform: {fileID: 0}
-  - radius: 0
-    offset: {x: 0, y: 0, z: 0}
-    rootTransform: {fileID: 0}
-  - radius: 0
-    offset: {x: 0, y: 0, z: 0}
-    rootTransform: {fileID: 0}
+    offset: {x: -0.19, y: 0, z: 0.67}
+    rootTransform: {fileID: 4385992269652857290}
+  - radius: 0.13
+    offset: {x: -0.15, y: 0.04, z: 0.49}
+    rootTransform: {fileID: 4385992269652857290}
+  - radius: 0.13
+    offset: {x: 0.02, y: 0, z: 0.29}
+    rootTransform: {fileID: 4385992269652857290}
 --- !u!114 &-1117669489125191641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toFollow: {fileID: 0}
+--- !u!4 &4385992269652857290 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: c529fabf72b012c4d9a881e4e3a22ab9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4385992269652724554}
+  m_PrefabAsset: {fileID: 0}
